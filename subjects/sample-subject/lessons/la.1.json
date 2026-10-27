@@ -1,0 +1,104 @@
+{
+  "id": "sample-linear-algebra.la.1",
+  "section": "la.1",
+  "version": "0.1.0",
+  "status": "machine-validated",
+  "title": "ผลคูณจุดและดีเทอร์มิแนนต์ 2×2",
+  "titleEn": "Dot Product and 2×2 Determinants",
+  "objectives": [
+    {
+      "id": "la.1.dot_product",
+      "text": "คำนวณผลคูณจุด (dot product) ของเวกเตอร์ใน $\\mathbb{R}^3$"
+    },
+    {
+      "id": "la.1.determinant",
+      "text": "คำนวณดีเทอร์มิแนนต์ของเมทริกซ์ $2\\times2$"
+    }
+  ],
+  "prerequisites": [],
+  "levels": {
+    "beginner": "ผลคูณจุดของเวกเตอร์สองตัวได้จากการคูณสมาชิกตำแหน่งเดียวกันแล้วรวมกัน ผลลัพธ์เป็นจำนวน ไม่ใช่เวกเตอร์ ส่วนดีเทอร์มิแนนต์ของเมทริกซ์ 2×2 คือผลคูณแนวทแยงหลักลบแนวทแยงรอง",
+    "standard": "$\\mathbf u\\cdot\\mathbf v = u_1v_1 + u_2v_2 + u_3v_3 = \\|\\mathbf u\\|\\|\\mathbf v\\|\\cos\\theta$ ถ้าเป็นศูนย์ เวกเตอร์ตั้งฉากกัน $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix} = ad - bc$ บอกสเกลของพื้นที่ที่การแปลงเชิงเส้นเปลี่ยน และเมทริกซ์มีตัวผกผันเมื่อดีเทอร์มิแนนต์ไม่เป็นศูนย์",
+    "advanced": "ผลคูณจุดเป็นผลคูณภายใน (inner product) ที่สมมาตร เชิงเส้น และบวกแน่นอน ดีเทอร์มิแนนต์เป็นฟังก์ชันเชิงเส้นหลายตัวแปรสลับเครื่องหมาย (alternating multilinear) ของแถว ค่าสัมบูรณ์คือพื้นที่ของสี่เหลี่ยมด้านขนานที่แถวสร้างขึ้น"
+  },
+  "definitions": [
+    {
+      "term": "ผลคูณจุด",
+      "termEn": "Dot product",
+      "body": "$\\mathbf u\\cdot\\mathbf v = \\sum u_iv_i$"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "เงื่อนไขการผกผันได้",
+      "statement": "$A$ มีตัวผกผัน $\\iff \\det A \\ne 0$"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix} = ad - bc",
+      "note": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "ผลคูณจุด",
+      "problem": "$(1,2,3)\\cdot(4,-1,2)$",
+      "steps": [
+        "$4 - 2 + 6$"
+      ],
+      "answer": "$8$",
+      "verify": {
+        "kind": "value",
+        "expr": "1*4 + 2*(-1) + 3*2",
+        "answer": "8"
+      }
+    },
+    {
+      "title": "ดีเทอร์มิแนนต์",
+      "problem": "$\\det\\begin{pmatrix}3&1\\\\2&5\\end{pmatrix}$",
+      "steps": [
+        "$15 - 2$"
+      ],
+      "answer": "$13$",
+      "verify": {
+        "kind": "value",
+        "expr": "3*5 - 1*2",
+        "answer": "13"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "ผลคูณจุดได้เวกเตอร์",
+      "right": "ได้สเกลาร์"
+    }
+  ],
+  "visualizations": [],
+  "summary": [
+    "ผลคูณจุดได้จำนวน",
+    "$\\det = ad - bc$"
+  ],
+  "review": [
+    {
+      "q": "$(1,0,0)\\cdot(0,1,0)$?",
+      "a": "$0$ (ตั้งฉาก)"
+    }
+  ],
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

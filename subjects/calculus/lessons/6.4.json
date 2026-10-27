@@ -1,0 +1,172 @@
+{
+  "id": "calculus.6.4",
+  "section": "6.4",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "พื้นที่ผิวของการหมุน",
+  "titleEn": "Areas of Surfaces of Revolution",
+  "objectives": [
+    {
+      "id": "6.4.surface",
+      "text": "คำนวณพื้นที่ผิวของการหมุน $S = \\int 2\\pi y\\,ds$"
+    },
+    {
+      "id": "6.4.about_x",
+      "text": "หมุนรอบแกน $x$"
+    },
+    {
+      "id": "6.4.about_y",
+      "text": "หมุนรอบแกน $y$"
+    },
+    {
+      "id": "6.4.vs_volume",
+      "text": "แยกพื้นที่ผิวออกจากปริมาตร และตรวจหน่วย/รัศมี"
+    }
+  ],
+  "prerequisites": [
+    "6.3"
+  ],
+  "levels": {
+    "beginner": "เมื่อหมุนเส้นโค้ง (ไม่ใช่บริเวณ) รอบแกน จะได้ผิวบาง ๆ เหมือนเปลือกแจกัน แบ่งเส้นโค้งเป็นท่อนสั้น ๆ แต่ละท่อนหมุนแล้วได้แถบรูปกรวยตัด (frustum) ที่มีพื้นที่ประมาณ (เส้นรอบวง) × (ความยาวท่อน) $= 2\\pi r\\,ds$ รวมทั้งหมดด้วยอินทิกรัล",
+    "standard": "ถ้า $f \\ge 0$ และ $f'$ ต่อเนื่องบน $[a,b]$ พื้นที่ผิวเมื่อหมุน $y = f(x)$ รอบแกน $x$: $S = \\int_a^b 2\\pi f(x)\\sqrt{1 + [f'(x)]^2}\\,dx$ หมุน $x = g(y)$ รอบแกน $y$: $S = \\int_c^d 2\\pi g(y)\\sqrt{1 + [g'(y)]^2}\\,dy$ รัศมีคือระยะถึงแกนหมุนเสมอ ปัจจัย $ds$ ต่างจากวิธีจานที่ใช้ $dx$: ถ้าใช้ $2\\pi y\\,dx$ จะได้คำตอบผิดเพราะไม่คิดความเอียงของผิว",
+    "advanced": "สูตรมาจากพื้นที่ผิวข้างของกรวยตัด $\\pi(r_1 + r_2)\\ell$ โดย $\\ell$ คือความยาวด้านเอียง เมื่อท่อนสั้นลง $(r_1 + r_2)/2 \\to f(x)$ และ $\\ell \\to ds$ ผลลัพธ์น่าสนใจคือโซนของทรงกลมรัศมี $r$ ระหว่างระนาบสองระนาบที่ห่าง $h$ มีพื้นที่ผิว $2\\pi r h$ ไม่ขึ้นกับตำแหน่ง (Archimedes) มีกรณีที่ปริมาตรจำกัดแต่พื้นที่ผิวไม่จำกัด เช่น Gabriel's horn $y = 1/x$, $x \\ge 1$"
+  },
+  "definitions": [
+    {
+      "term": "พื้นที่ผิวของการหมุน",
+      "termEn": "Surface area of revolution",
+      "body": "พื้นที่ของผิวที่เกิดจากการหมุนเส้นโค้งรอบเส้นตรง"
+    },
+    {
+      "term": "กรวยตัด",
+      "termEn": "Frustum",
+      "body": "ส่วนของกรวยระหว่างระนาบขนานสองระนาบ พื้นที่ผิวข้าง $\\pi(r_1 + r_2)\\ell$"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "พื้นที่ผิวรอบแกน x",
+      "statement": "$S = \\int_a^b 2\\pi f(x)\\sqrt{1 + f'(x)^2}\\,dx$",
+      "conditions": "f ≥ 0, f' ต่อเนื่อง"
+    },
+    {
+      "name": "พื้นที่ผิวรอบแกน y",
+      "statement": "$S = \\int_c^d 2\\pi g(y)\\sqrt{1 + g'(y)^2}\\,dy$",
+      "conditions": "g ≥ 0, g' ต่อเนื่อง"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "S = \\int 2\\pi\\,\\rho\\,ds",
+      "note": "$\\rho$ = ระยะถึงแกนหมุน"
+    },
+    {
+      "tex": "ds = \\sqrt{1 + (y')^2}\\,dx",
+      "note": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "กรวย",
+      "problem": "หมุน $y = \\frac{3}{4}x$, $0 \\le x \\le 4$ รอบแกน $x$",
+      "steps": [
+        "$y' = \\frac34$, $\\sqrt{1 + \\frac{9}{16}} = \\frac54$",
+        "$S = \\int_0^4 2\\pi\\cdot\\frac34 x\\cdot\\frac54 dx = \\frac{15\\pi}{8}\\cdot 8$"
+      ],
+      "answer": "$15\\pi$ (ตรงกับ $\\pi r\\ell = \\pi\\cdot3\\cdot5$)",
+      "verify": {
+        "kind": "definite",
+        "f": "2*pi*(3/4)*x*(5/4)",
+        "a": "0",
+        "b": "4",
+        "answer": "15*pi"
+      }
+    },
+    {
+      "title": "รากที่สอง",
+      "problem": "หมุน $y = \\sqrt{x}$, $0\\le x\\le 2$ รอบแกน $x$",
+      "steps": [
+        "$2\\pi\\sqrt x\\sqrt{1 + \\frac{1}{4x}} = \\pi\\sqrt{4x + 1}$",
+        "$S = \\pi\\int_0^2\\sqrt{4x+1}dx = \\frac{\\pi}{6}\\left[(4x+1)^{3/2}\\right]_0^2 = \\frac\\pi6(27 - 1)$"
+      ],
+      "answer": "$\\frac{13\\pi}{3}$",
+      "verify": {
+        "kind": "definite",
+        "f": "pi*sqrt(4x+1)",
+        "a": "0",
+        "b": "2",
+        "answer": "13*pi/3"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "$S = \\int 2\\pi y\\,dx$",
+      "right": "ต้องใช้ $ds$ ไม่ใช่ $dx$"
+    },
+    {
+      "wrong": "ใช้สูตรปริมาตร $\\pi y^2$",
+      "right": "พื้นที่ผิวมีหน่วยกำลังสอง ใช้ $2\\pi y\\,ds$"
+    },
+    {
+      "wrong": "หมุนรอบแกน $y$ แต่ใช้รัศมี $y$",
+      "right": "รอบแกน $y$ รัศมีคือ $x$"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "revolution",
+      "f": "sqrt(x)",
+      "a": 0,
+      "b": 2,
+      "axis": "x",
+      "method": "surface"
+    }
+  ],
+  "summary": [
+    "$S = \\int 2\\pi\\rho\\,ds$",
+    "ใช้ $ds$ เพราะผิวเอียง",
+    "รัศมีวัดถึงแกนหมุน",
+    "มักใช้การแทนค่าหลังจัดรูป"
+  ],
+  "review": [
+    {
+      "q": "พื้นที่ผิวทรงกลมรัศมี $r$?",
+      "a": "$4\\pi r^2$"
+    },
+    {
+      "q": "หน่วยของพื้นที่ผิวเมื่อ $x$ เป็นเมตร?",
+      "a": "ตารางเมตร"
+    },
+    {
+      "q": "ทำไม $2\\pi y\\,dx$ ให้ค่าน้อยเกินไป?",
+      "a": "เพราะ $dx \\le ds$ ไม่คิดความยาวด้านเอียง"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      338,
+      343
+    ],
+    "pdfIndex": 356,
+    "pdfPage": 357,
+    "verified": true,
+    "titleInBook": "Areas of Surfaces of Revolution"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

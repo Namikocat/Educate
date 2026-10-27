@@ -1,0 +1,369 @@
+{
+  "contents_pdf_indices": [
+    3,
+    4,
+    5
+  ],
+  "entries": [
+    {
+      "section": "1.1",
+      "title": "Functions and Their Graphs",
+      "printed_page": 1,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "1.2",
+      "title": "Combining Functions; Shifting and Scaling Graphs",
+      "printed_page": 14,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "1.3",
+      "title": "Trigonometric Functions",
+      "printed_page": 21,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "1.4",
+      "title": "Graphing with Software",
+      "printed_page": 29,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "2.1",
+      "title": "Rates of Change and Tangent Lines to Curves",
+      "printed_page": 38,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "2.2",
+      "title": "Limit of a Function and Limit Laws",
+      "printed_page": 45,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "2.3",
+      "title": "The Precise Definition of a Limit",
+      "printed_page": 56,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "2.4",
+      "title": "One-Sided Limits",
+      "printed_page": 65,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "2.5",
+      "title": "Continuity",
+      "printed_page": 72,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "2.6",
+      "title": "Limits Involving Infinity; Asymptotes of Graphs",
+      "printed_page": 83,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.1",
+      "title": "Tangent Lines and the Derivative at a Point",
+      "printed_page": 102,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.2",
+      "title": "The Derivative as a Function",
+      "printed_page": 106,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.3",
+      "title": "Differentiation Rules",
+      "printed_page": 115,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.4",
+      "title": "The Derivative as a Rate of Change",
+      "printed_page": 124,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.5",
+      "title": "Derivatives of Trigonometric Functions",
+      "printed_page": 134,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.6",
+      "title": "The Chain Rule",
+      "printed_page": 140,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.7",
+      "title": "Implicit Differentiation",
+      "printed_page": 148,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.8",
+      "title": "Related Rates",
+      "printed_page": 153,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "3.9",
+      "title": "Linearization and Differentials",
+      "printed_page": 162,
+      "contents_pdf_index": 3
+    },
+    {
+      "section": "4.1",
+      "title": "Extreme Values of Functions on Closed Intervals",
+      "printed_page": 183,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "4.2",
+      "title": "The Mean Value Theorem",
+      "printed_page": 191,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "4.3",
+      "title": "Monotonic Functions and the First Derivative Test",
+      "printed_page": 197,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "4.4",
+      "title": "Concavity and Curve Sketching",
+      "printed_page": 202,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "4.5",
+      "title": "Applied Optimization",
+      "printed_page": 214,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "4.6",
+      "title": "Newton’s Method",
+      "printed_page": 226,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "4.7",
+      "title": "Antiderivatives",
+      "printed_page": 231,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "5.1",
+      "title": "Area and Estimating with Finite Sums",
+      "printed_page": 248,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "5.2",
+      "title": "Sigma Notation and Limits of Finite Sums",
+      "printed_page": 258,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "5.3",
+      "title": "The Definite Integral",
+      "printed_page": 265,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "5.4",
+      "title": "The Fundamental Theorem of Calculus",
+      "printed_page": 278,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "5.5",
+      "title": "Indefinite Integrals and the Substitution Method",
+      "printed_page": 289,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "5.6",
+      "title": "Definite Integral Substitutions and the Area Between Curves",
+      "printed_page": 296,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "6.1",
+      "title": "Volumes Using Cross-Sections",
+      "printed_page": 314,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "6.2",
+      "title": "Volumes Using Cylindrical Shells",
+      "printed_page": 325,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "6.3",
+      "title": "Arc Length",
+      "printed_page": 333,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "6.4",
+      "title": "Areas of Surfaces of Revolution",
+      "printed_page": 338,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "6.5",
+      "title": "Work and Fluid Forces",
+      "printed_page": 344,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "6.6",
+      "title": "Moments and Centers of Mass",
+      "printed_page": 353,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.1",
+      "title": "Inverse Functions and Their Derivatives",
+      "printed_page": 370,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.2",
+      "title": "Natural Logarithms",
+      "printed_page": 378,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.3",
+      "title": "Exponential Functions",
+      "printed_page": 386,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.4",
+      "title": "Exponential Change and Separable Differential Equations",
+      "printed_page": 397,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.5",
+      "title": "Indeterminate Forms and L’Hôpital’s Rule",
+      "printed_page": 407,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.6",
+      "title": "Inverse Trigonometric Functions",
+      "printed_page": 416,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.7",
+      "title": "Hyperbolic Functions",
+      "printed_page": 428,
+      "contents_pdf_index": 4
+    },
+    {
+      "section": "7.8",
+      "title": "Relative Rates of Growth",
+      "printed_page": 436,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.1",
+      "title": "Using Basic Integration Formulas",
+      "printed_page": 447,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.2",
+      "title": "Integration by Parts",
+      "printed_page": 452,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.3",
+      "title": "Trigonometric Integrals",
+      "printed_page": 460,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.4",
+      "title": "Trigonometric Substitutions",
+      "printed_page": 466,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.5",
+      "title": "Integration of Rational Functions by Partial Fractions",
+      "printed_page": 471,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.6",
+      "title": "Integral Tables and Computer Algebra Systems",
+      "printed_page": 479,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.7",
+      "title": "Numerical Integration",
+      "printed_page": 485,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.8",
+      "title": "Improper Integrals",
+      "printed_page": 494,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "8.9",
+      "title": "Probability",
+      "printed_page": 505,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "9.1",
+      "title": "Solutions, Slope Fields, and Euler’s Method",
+      "printed_page": 526,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "9.2",
+      "title": "First-Order Linear Equations",
+      "printed_page": 534,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "9.3",
+      "title": "Applications",
+      "printed_page": 540,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "9.4",
+      "title": "Graphical Solutions of Autonomous Equations",
+      "printed_page": 546,
+      "contents_pdf_index": 5
+    },
+    {
+      "section": "9.5",
+      "title": "Systems of Equations and Phase Planes",
+      "printed_page": 553,
+      "contents_pdf_index": 5
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "id": "calculus.8.2",
+  "section": "8.2",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "การอินทิเกรตทีละส่วน",
+  "titleEn": "Integration by Parts",
+  "objectives": [
+    {
+      "id": "8.2.parts",
+      "text": "ใช้สูตร $\\int u\\,dv = uv - \\int v\\,du$"
+    },
+    {
+      "id": "8.2.choose_u",
+      "text": "เลือก $u$ และ $dv$ อย่างมีหลัก (LIATE)"
+    },
+    {
+      "id": "8.2.repeated",
+      "text": "ใช้ซ้ำหลายครั้ง / วิธีตาราง (tabular)"
+    },
+    {
+      "id": "8.2.cyclic",
+      "text": "จัดการกรณีวนกลับ (cyclic) แล้วแก้สมการ"
+    },
+    {
+      "id": "8.2.definite",
+      "text": "ใช้กับอินทิกรัลจำกัดเขต"
+    },
+    {
+      "id": "8.2.verify",
+      "text": "ตรวจคำตอบด้วยการหาอนุพันธ์"
+    }
+  ],
+  "prerequisites": [
+    "5.5",
+    "7.2",
+    "7.3"
+  ],
+  "levels": {
+    "beginner": "เมื่อตัวถูกอินทิเกรตเป็นผลคูณของฟังก์ชันสองแบบ เช่น $x e^x$ เราใช้กฎผลคูณของอนุพันธ์แบบย้อนกลับ เลือกส่วนหนึ่งเป็น $u$ (ส่วนที่หาอนุพันธ์แล้วง่ายขึ้น) อีกส่วนเป็น $dv$ (ส่วนที่อินทิเกรตได้) แล้วใช้สูตร $\\int u\\,dv = uv - \\int v\\,du$ หวังว่าอินทิกรัลใหม่จะง่ายกว่าเดิม",
+    "standard": "จาก $(uv)' = u'v + uv'$ อินทิเกรตทั้งสองข้างได้ $\\int u\\,dv = uv - \\int v\\,du$ หลัก LIATE ช่วยเลือก $u$: Logarithmic, Inverse trig, Algebraic, Trigonometric, Exponential (ตัวที่มาก่อนเป็น $u$) กรณีพหุนาม × $e^{ax}$ หรือ ตรีโกณ: ให้ $u$ = พหุนาม ใช้ซ้ำจนพหุนามหมด กรณี $\\ln x$ หรือ $\\tan^{-1}x$ เดี่ยว: ให้ $dv = dx$ กรณี $e^{ax}\\sin bx$: ใช้สองครั้ง อินทิกรัลเดิมกลับมา แล้วแก้สมการหา $I$ อินทิกรัลจำกัดเขต: $\\int_a^b u\\,dv = [uv]_a^b - \\int_a^b v\\,du$",
+    "advanced": "วิธีตาราง (tabular integration) ใช้เมื่อ $u$ เป็นพหุนาม: เรียงอนุพันธ์ของ $u$ จนเป็น 0 กับอินทิกรัลซ้ำของ $dv$ แล้วคูณทแยงสลับเครื่องหมาย สูตรลดทอน (reduction formula) เช่น $\\int\\cos^n x\\,dx = \\frac{\\cos^{n-1}x\\sin x}{n} + \\frac{n-1}{n}\\int\\cos^{n-2}x\\,dx$ ได้จากการทำทีละส่วน การเลือก $u, dv$ ผิดอาจทำให้อินทิกรัลยากขึ้น ซึ่งเป็นสัญญาณให้สลับ"
+  },
+  "definitions": [
+    {
+      "term": "การอินทิเกรตทีละส่วน",
+      "termEn": "Integration by Parts",
+      "body": "$\\int u\\,dv = uv - \\int v\\,du$"
+    },
+    {
+      "term": "LIATE",
+      "termEn": "LIATE heuristic",
+      "body": "ลำดับความสำคัญในการเลือก $u$: Log, Inverse trig, Algebraic, Trig, Exponential — เป็นแนวทาง ไม่ใช่กฎตายตัว"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "สูตรการอินทิเกรตทีละส่วน",
+      "statement": "$\\int u(x)v'(x)\\,dx = u(x)v(x) - \\int v(x)u'(x)\\,dx$",
+      "conditions": "u, v มีอนุพันธ์ต่อเนื่อง"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\int u\\,dv = uv - \\int v\\,du",
+      "note": ""
+    },
+    {
+      "tex": "\\int_a^b u\\,dv = \\big[uv\\big]_a^b - \\int_a^b v\\,du",
+      "note": ""
+    },
+    {
+      "tex": "\\int e^{ax}\\sin bx\\,dx = \\frac{e^{ax}(a\\sin bx - b\\cos bx)}{a^2 + b^2} + C",
+      "note": "จากกรณีวนกลับ"
+    }
+  ],
+  "examples": [
+    {
+      "title": "พหุนาม × เอกซ์โพเนนเชียล",
+      "problem": "หา $\\int x e^x dx$",
+      "steps": [
+        "$u = x$, $dv = e^xdx$",
+        "$du = dx$, $v = e^x$",
+        "$xe^x - \\int e^x dx$"
+      ],
+      "answer": "$e^x(x - 1) + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "x e^x",
+        "answer": "e^x (x-1)"
+      }
+    },
+    {
+      "title": "ลอการิทึม",
+      "problem": "หา $\\int x^2\\ln x\\,dx$",
+      "steps": [
+        "$u = \\ln x$, $dv = x^2dx$",
+        "$du = \\frac{dx}{x}$, $v = \\frac{x^3}{3}$",
+        "$\\frac{x^3}{3}\\ln x - \\int\\frac{x^2}{3}dx$"
+      ],
+      "answer": "$\\frac{x^3}{3}\\ln x - \\frac{x^3}{9} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "x^2 ln(x)",
+        "answer": "x^3 ln(x)/3 - x^3/9"
+      }
+    },
+    {
+      "title": "วนกลับ",
+      "problem": "หา $\\int e^x\\cos x\\,dx$",
+      "steps": [
+        "ครั้งที่ 1: $u = \\cos x$ ได้ $e^x\\cos x + \\int e^x\\sin x\\,dx$",
+        "ครั้งที่ 2: $u = \\sin x$ ได้ $e^x\\cos x + e^x\\sin x - I$",
+        "$2I = e^x(\\cos x + \\sin x)$"
+      ],
+      "answer": "$\\frac{e^x(\\sin x + \\cos x)}{2} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "e^x cos(x)",
+        "answer": "e^x (sin(x) + cos(x))/2"
+      }
+    },
+    {
+      "title": "จำกัดเขต",
+      "problem": "หา $\\int_0^\\pi x\\sin x\\,dx$",
+      "steps": [
+        "$u = x$, $dv = \\sin x\\,dx$, $v = -\\cos x$",
+        "$[-x\\cos x]_0^\\pi + \\int_0^\\pi\\cos x\\,dx = \\pi + 0$"
+      ],
+      "answer": "$\\pi$",
+      "verify": {
+        "kind": "definite",
+        "f": "x sin(x)",
+        "a": "0",
+        "b": "pi",
+        "answer": "pi"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "ให้ $u = e^x$ กับ $\\int xe^xdx$",
+      "right": "จะได้ $\\int\\frac{x^2}{2}e^x$ ซึ่งยากขึ้น ให้ $u = x$"
+    },
+    {
+      "wrong": "ลืมเครื่องหมายลบใน $uv - \\int v\\,du$",
+      "right": "ตรวจด้วยการหาอนุพันธ์ทุกครั้ง"
+    },
+    {
+      "wrong": "กรณีวนกลับคิดว่าวนไม่สิ้นสุด",
+      "right": "อินทิกรัลเดิมกลับมา ให้ย้ายข้างแล้วแก้สมการ"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "area",
+      "f": "x*sin(x)",
+      "a": 0,
+      "b": 3.14159
+    }
+  ],
+  "summary": [
+    "$\\int u\\,dv = uv - \\int v\\,du$",
+    "LIATE ช่วยเลือก $u$",
+    "พหุนามเป็น $u$ ใช้ซ้ำจนหมด",
+    "กรณีวนกลับ: แก้สมการหา $I$"
+  ],
+  "review": [
+    {
+      "q": "$\\int\\ln x\\,dx$?",
+      "a": "$x\\ln x - x + C$"
+    },
+    {
+      "q": "$\\int x\\cos x\\,dx$?",
+      "a": "$x\\sin x + \\cos x + C$"
+    },
+    {
+      "q": "$\\int x^3e^x dx$ ต้องใช้ทีละส่วนกี่ครั้ง?",
+      "a": "3 ครั้ง"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      452,
+      459
+    ],
+    "pdfIndex": 470,
+    "pdfPage": 471,
+    "verified": true,
+    "titleInBook": "Integration by Parts"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 3,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

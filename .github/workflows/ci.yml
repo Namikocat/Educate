@@ -1,0 +1,31 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Python engine tests
+        working-directory: services/math-engine
+        run: |
+          python -m venv .venv
+          .venv\Scripts\pip install -r requirements.txt
+          .venv\Scripts\python -X utf8 -m pytest -q
+      - name: Content validation
+        run: services\math-engine\.venv\Scripts\python -X utf8 tools/curriculum-validator/validate.py subjects/calculus
+      - name: Frontend
+        working-directory: apps/desktop
+        run: |
+          npm ci
+          npx tsc --noEmit
+          npx vitest run
+      - name: Rust
+        working-directory: apps/desktop/src-tauri
+        run: |
+          mkdir ..\..\..\build\math-engine\unilearn-math -Force
+          cargo test

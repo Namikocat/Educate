@@ -1,0 +1,219 @@
+{
+  "id": "calculus.7.3",
+  "section": "7.3",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "ฟังก์ชันเอกซ์โพเนนเชียล",
+  "titleEn": "Exponential Functions",
+  "objectives": [
+    {
+      "id": "7.3.exp",
+      "text": "นิยาม $e^x$ เป็นฟังก์ชันผกผันของ $\\ln x$"
+    },
+    {
+      "id": "7.3.differentiation",
+      "text": "หาอนุพันธ์ $\\frac{d}{dx}e^u = e^u u'$"
+    },
+    {
+      "id": "7.3.integration",
+      "text": "อินทิเกรต $\\int e^u du = e^u + C$"
+    },
+    {
+      "id": "7.3.base_a",
+      "text": "จัดการ $a^x$ และ $\\log_a x$ ผ่านการเปลี่ยนฐาน"
+    },
+    {
+      "id": "7.3.identities",
+      "text": "ใช้เอกลักษณ์ $e^{\\ln x} = x$, $\\ln e^x = x$ แก้สมการ"
+    }
+  ],
+  "prerequisites": [
+    "7.1",
+    "7.2"
+  ],
+  "levels": {
+    "beginner": "$e^x$ เป็นฟังก์ชันพิเศษเพราะอนุพันธ์ของมันคือตัวมันเอง กราฟของ $e^x$ คือกราฟ $\\ln x$ สะท้อนข้ามเส้น $y = x$ เลขฐานอื่นเช่น $2^x$ เปลี่ยนเป็นฐาน $e$ ได้เสมอ: $2^x = e^{x\\ln 2}$ ทำให้หาอนุพันธ์ได้ด้วยกฎเดียวกัน",
+    "standard": "$\\exp = \\ln^{-1}$ จึง $e^{\\ln x} = x$ ($x>0$) และ $\\ln(e^x) = x$ จากสูตรอนุพันธ์ของฟังก์ชันผกผัน $\\frac{d}{dx}e^x = \\frac{1}{1/e^x} = e^x$ กฎลูกโซ่: $\\frac{d}{dx}e^{u} = e^u u'$ และ $\\int e^{ax}dx = \\frac{e^{ax}}{a} + C$ สำหรับ $a > 0$, $a \\ne 1$: $a^x = e^{x\\ln a}$ ดังนั้น $\\frac{d}{dx}a^x = a^x\\ln a$, $\\int a^xdx = \\frac{a^x}{\\ln a} + C$, $\\log_a x = \\frac{\\ln x}{\\ln a}$ และ $\\frac{d}{dx}\\log_a x = \\frac{1}{x\\ln a}$ สำหรับ $x^{g(x)}$ ที่ฐานและเลขชี้กำลังเป็นตัวแปร ต้องเขียน $e^{g(x)\\ln x}$ ก่อน",
+    "advanced": "กฎเลขชี้กำลัง $e^{a+b} = e^ae^b$ ได้จาก $\\ln(e^ae^b) = a + b$ และความเป็นหนึ่งต่อหนึ่งของ $\\ln$ $e$ สามารถเขียนเป็นลิมิต $e = \\lim_{x\\to0}(1+x)^{1/x}$ ซึ่งพิสูจน์ได้จาก $\\ln$ ที่มีอนุพันธ์ $1$ ที่ $x = 1$ สมการเชิงอนุพันธ์ $y' = ky$ มีผลเฉลยทั่วไป $y = Ce^{kx}$ เพียงชุดเดียว ซึ่งเป็นพื้นฐานของแบบจำลองการเติบโตและการสลาย"
+  },
+  "definitions": [
+    {
+      "term": "ฟังก์ชันเอกซ์โพเนนเชียลธรรมชาติ",
+      "termEn": "Natural exponential function",
+      "body": "$e^x = \\exp(x)$ คือฟังก์ชันผกผันของ $\\ln x$"
+    },
+    {
+      "term": "ฟังก์ชันเอกซ์โพเนนเชียลฐาน a",
+      "termEn": "General exponential",
+      "body": "$a^x = e^{x\\ln a}$, $a > 0$"
+    },
+    {
+      "term": "ลอการิทึมฐาน a",
+      "termEn": "Logarithm base a",
+      "body": "$\\log_a x = \\frac{\\ln x}{\\ln a}$"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "อนุพันธ์ของ eˣ",
+      "statement": "$\\frac{d}{dx}e^x = e^x$"
+    },
+    {
+      "name": "กฎเลขชี้กำลัง",
+      "statement": "$e^{a+b} = e^ae^b$, $e^{-a} = 1/e^a$, $(e^a)^r = e^{ar}$"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\frac{d}{dx}e^{u} = e^{u}\\frac{du}{dx}",
+      "note": ""
+    },
+    {
+      "tex": "\\frac{d}{dx}a^{u} = a^{u}\\ln a\\,\\frac{du}{dx}",
+      "note": ""
+    },
+    {
+      "tex": "\\int a^x dx = \\frac{a^x}{\\ln a} + C",
+      "note": ""
+    },
+    {
+      "tex": "\\frac{d}{dx}\\log_a u = \\frac{u'}{u\\ln a}",
+      "note": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "อนุพันธ์",
+      "problem": "หา $\\frac{d}{dx}e^{x^2 - 3x}$",
+      "steps": [
+        "$u = x^2 - 3x$, $u' = 2x - 3$"
+      ],
+      "answer": "$(2x - 3)e^{x^2 - 3x}$",
+      "verify": {
+        "kind": "derivative",
+        "f": "e^(x^2-3x)",
+        "answer": "(2x-3)e^(x^2-3x)"
+      }
+    },
+    {
+      "title": "ฐานทั่วไป",
+      "problem": "หา $\\int 5^x dx$",
+      "steps": [
+        "$5^x = e^{x\\ln5}$",
+        "$\\int e^{x\\ln 5}dx = \\frac{e^{x\\ln5}}{\\ln 5}$"
+      ],
+      "answer": "$\\frac{5^x}{\\ln 5} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "5^x",
+        "answer": "5^x/ln(5)"
+      }
+    },
+    {
+      "title": "ฐานและเลขชี้กำลังเป็นตัวแปร",
+      "problem": "หา $\\frac{d}{dx}x^x$, $x > 0$",
+      "steps": [
+        "$x^x = e^{x\\ln x}$",
+        "$\\frac{d}{dx}(x\\ln x) = \\ln x + 1$"
+      ],
+      "answer": "$x^x(\\ln x + 1)$",
+      "verify": {
+        "kind": "derivative",
+        "f": "x^x",
+        "answer": "x^x (ln(x) + 1)"
+      }
+    },
+    {
+      "title": "แก้สมการ",
+      "problem": "แก้ $e^{2x - 1} = 7$",
+      "steps": [
+        "ใส่ $\\ln$: $2x - 1 = \\ln 7$"
+      ],
+      "answer": "$x = \\frac{1 + \\ln 7}{2}$",
+      "verify": {
+        "kind": "value",
+        "expr": "e^(2*((1+ln(7))/2) - 1)",
+        "answer": "7"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "$\\frac{d}{dx}2^x = x2^{x-1}$",
+      "right": "กฎกำลังใช้เมื่อเลขชี้กำลังคงที่ ที่ถูกคือ $2^x\\ln 2$"
+    },
+    {
+      "wrong": "$\\frac{d}{dx}x^x = x\\cdot x^{x-1}$",
+      "right": "เขียนเป็น $e^{x\\ln x}$ ก่อน ได้ $x^x(\\ln x + 1)$"
+    },
+    {
+      "wrong": "$e^{a+b} = e^a + e^b$",
+      "right": "$e^{a+b} = e^a e^b$"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "inverse",
+      "f": "exp(x)",
+      "g": "ln(x)",
+      "a": -2,
+      "b": 2
+    }
+  ],
+  "summary": [
+    "$e^x = \\ln^{-1}x$",
+    "$(e^u)' = e^u u'$",
+    "$a^x = e^{x\\ln a}$",
+    "ใส่ $\\ln$ แก้สมการเอกซ์โพเนนเชียล"
+  ],
+  "review": [
+    {
+      "q": "$\\int e^{3x}dx$?",
+      "a": "$\\frac{e^{3x}}{3} + C$"
+    },
+    {
+      "q": "$\\frac{d}{dx}\\log_{10}x$?",
+      "a": "$\\frac{1}{x\\ln10}$"
+    },
+    {
+      "q": "$e^{\\ln 5 + \\ln 2}$?",
+      "a": "$10$"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      386,
+      396
+    ],
+    "pdfIndex": 404,
+    "pdfPage": 405,
+    "verified": true,
+    "titleInBook": "Exponential Functions"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 3,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

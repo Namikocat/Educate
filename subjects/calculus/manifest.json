@@ -1,0 +1,27 @@
+{
+  "id": "calculus",
+  "name": "แคลคูลัส: อินทิกรัลและการประยุกต์",
+  "nameEn": "Calculus: Integrals and Applications",
+  "version": "1.0.0",
+  "contentApi": 1,
+  "language": ["th", "en"],
+  "description": "บทเรียนและโจทย์ฝึกที่สร้างโดยอัลกอริทึม ครอบคลุม 20 หัวข้อสอบจากบทที่ 5–8 ของ Thomas' Calculus ฉบับที่ 14 เนื้อหาคำอธิบายเขียนขึ้นใหม่ทั้งหมด อ้างอิงหมายเลขหัวข้อและหน้าของตำรา",
+  "dependencies": [],
+  "curriculumVersion": "thomas-14e-exam-2026.1",
+  "requiredEngines": ["sympy-math-engine@1", "viz-2d@1", "viz-3d@1"],
+  "capabilities": ["lessons", "procedural-problems", "step-solutions", "exams", "viz-2d", "viz-3d"],
+  "book": {
+    "title": "Thomas' Calculus",
+    "edition": "14th",
+    "authors": ["George B. Thomas Jr.", "Joel Hass", "Christopher Heil", "Maurice D. Weir"],
+    "sha256": "acc49c2cd143c4981d2a06d0e0623274cfe0f51ec4b0a84cbadeb560c313574c",
+    "rights": "private-study-reference"
+  },
+  "completeness": "full-course",
+  "chapters": [
+    {"id": "5", "title": "อินทิกรัล", "titleEn": "Integrals", "sections": ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6"]},
+    {"id": "6", "title": "การประยุกต์ของอินทิกรัลจำกัดเขต", "titleEn": "Applications of Definite Integrals", "sections": ["6.1", "6.2", "6.3", "6.4"]},
+    {"id": "7", "title": "ฟังก์ชันอดิศัย", "titleEn": "Transcendental Functions", "sections": ["7.1", "7.2", "7.3", "7.5"]},
+    {"id": "8", "title": "เทคนิคการอินทิเกรต", "titleEn": "Techniques of Integration", "sections": ["8.1", "8.2", "8.3", "8.4", "8.5", "8.8"]}
+  ]
+}

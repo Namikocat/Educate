@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "UniLearn Studio",
+  "version": "1.0.0",
+  "identifier": "studio.unilearn.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "UniLearn Studio",
+        "width": 1400,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 680,
+        "resizable": true,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob:; connect-src ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "msi"],
+    "publisher": "UniLearn Studio",
+    "copyright": "UniLearn Studio contributors",
+    "category": "Education",
+    "shortDescription": "Offline university learning platform (Calculus)",
+    "longDescription": "UniLearn Studio: lessons, procedurally generated and symbolically verified exercises, step-by-step solutions, exams and interactive visualizations. Works offline. Optional Claude CLI tutor.",
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.ico"],
+    "resources": { "../../../build/math-engine/unilearn-math/": "math-engine/" },
+    "windows": {
+      "webviewInstallMode": { "type": "downloadBootstrapper" },
+      "nsis": { "installMode": "currentUser", "languages": ["Thai", "English"], "displayLanguageSelector": false },
+      "wix": { "language": "en-US" }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Main window: core events only. All app functionality goes through the app's own typed commands (math_call, db, claude_*). No shell, fs, or http plugin permissions are granted to the webview.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

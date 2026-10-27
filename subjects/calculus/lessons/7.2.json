@@ -1,0 +1,199 @@
+{
+  "id": "calculus.7.2",
+  "section": "7.2",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "ลอการิทึมธรรมชาติ",
+  "titleEn": "Natural Logarithms",
+  "objectives": [
+    {
+      "id": "7.2.definition",
+      "text": "นิยาม $\\ln x = \\int_1^x \\frac{dt}{t}$ สำหรับ $x > 0$"
+    },
+    {
+      "id": "7.2.properties",
+      "text": "ใช้สมบัติผลคูณ ผลหาร และกำลังของลอการิทึม"
+    },
+    {
+      "id": "7.2.differentiation",
+      "text": "หาอนุพันธ์ $\\frac{d}{dx}\\ln u = \\frac{u'}{u}$"
+    },
+    {
+      "id": "7.2.integration",
+      "text": "อินทิเกรต $\\int \\frac{u'}{u}dx = \\ln|u| + C$ รวมถึง $\\tan$ และ $\\cot$"
+    },
+    {
+      "id": "7.2.log_diff",
+      "text": "ใช้การหาอนุพันธ์โดยลอการิทึม (logarithmic differentiation)"
+    }
+  ],
+  "prerequisites": [
+    "5.4",
+    "7.1"
+  ],
+  "levels": {
+    "beginner": "$\\ln x$ คือ \"เลขชี้กำลังที่ต้องยก $e$ เพื่อให้ได้ $x$\" แต่ในแคลคูลัสเรานิยามมันด้วยพื้นที่ใต้ $y = 1/t$ จาก 1 ถึง $x$ ข้อดีคืออนุพันธ์ของ $\\ln x$ เป็นแค่ $1/x$ และลอการิทึมเปลี่ยนการคูณเป็นการบวก ทำให้หาอนุพันธ์ของผลคูณซับซ้อนได้ง่ายขึ้น",
+    "standard": "นิยาม $\\ln x = \\int_1^x\\frac1t dt$, $x > 0$ จาก FTC ได้ $\\frac{d}{dx}\\ln x = \\frac1x$ และด้วยกฎลูกโซ่ $\\frac{d}{dx}\\ln u = \\frac{u'}{u}$ ($u > 0$) และ $\\frac{d}{dx}\\ln|x| = \\frac1x$ ($x \\ne 0$) จึงได้ $\\int\\frac{dx}{x} = \\ln|x| + C$ สมบัติ: $\\ln(ab) = \\ln a + \\ln b$, $\\ln\\frac ab = \\ln a - \\ln b$, $\\ln a^r = r\\ln a$ ผลที่ใช้บ่อย: $\\int\\tan x\\,dx = -\\ln|\\cos x| + C$, $\\int\\cot x\\,dx = \\ln|\\sin x| + C$ การหาอนุพันธ์โดยลอการิทึม: ใส่ $\\ln$ ทั้งสองข้าง ใช้สมบัติแยก แล้วหาอนุพันธ์โดยปริยาย",
+    "advanced": "สมบัติผลคูณพิสูจน์ได้จากการที่ $\\ln(ax)$ และ $\\ln x$ มีอนุพันธ์เท่ากัน ($\\frac1x$) จึงต่างกันด้วยค่าคงที่ และแทน $x = 1$ ได้ค่าคงที่ $= \\ln a$ จำนวน $e$ นิยามเป็นค่าเดียวที่ $\\ln e = 1$ ($\\int_1^e\\frac{dt}{t} = 1$) $\\ln$ เพิ่มขึ้นและเว้าลง และ $\\ln x\\to\\infty$ เมื่อ $x\\to\\infty$ แต่ช้ากว่ากำลังบวกใด ๆ ของ $x$ ค่าคงที่ $C$ ใน $\\ln|x| + C$ อาจต่างกันบน $x > 0$ และ $x < 0$"
+  },
+  "definitions": [
+    {
+      "term": "ลอการิทึมธรรมชาติ",
+      "termEn": "Natural logarithm",
+      "body": "$\\ln x = \\int_1^x\\frac{1}{t}dt$, $x > 0$"
+    },
+    {
+      "term": "จำนวน e",
+      "termEn": "The number e",
+      "body": "จำนวนที่ $\\ln e = 1$; $e \\approx 2.71828$"
+    },
+    {
+      "term": "การหาอนุพันธ์โดยลอการิทึม",
+      "termEn": "Logarithmic differentiation",
+      "body": "ใส่ $\\ln$ ทั้งสองข้างของ $y = f(x)$ แล้วหาอนุพันธ์ เพื่อจัดการผลคูณ ผลหาร และกำลังที่ซับซ้อน"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "อนุพันธ์ของ ln",
+      "statement": "$\\frac{d}{dx}\\ln|u| = \\frac{u'}{u}$",
+      "conditions": "u ≠ 0"
+    },
+    {
+      "name": "สมบัติเชิงพีชคณิต",
+      "statement": "$\\ln ab = \\ln a + \\ln b$, $\\ln\\frac{a}{b} = \\ln a - \\ln b$, $\\ln a^r = r\\ln a$",
+      "conditions": "a, b > 0"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\int \\frac{u'(x)}{u(x)}dx = \\ln|u(x)| + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int \\tan x\\,dx = -\\ln|\\cos x| + C = \\ln|\\sec x| + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int \\cot x\\,dx = \\ln|\\sin x| + C",
+      "note": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "อนุพันธ์",
+      "problem": "หา $\\frac{d}{dx}\\ln(x^2 + 3)$",
+      "steps": [
+        "$u = x^2 + 3$, $u' = 2x$",
+        "$\\frac{u'}{u}$"
+      ],
+      "answer": "$\\frac{2x}{x^2 + 3}$",
+      "verify": {
+        "kind": "derivative",
+        "f": "ln(x^2+3)",
+        "answer": "2x/(x^2+3)"
+      }
+    },
+    {
+      "title": "อินทิกรัล",
+      "problem": "หา $\\int\\frac{4x}{x^2 + 1}dx$",
+      "steps": [
+        "$u = x^2 + 1$, $du = 2x\\,dx$",
+        "$2\\int\\frac{du}{u} = 2\\ln|u|$"
+      ],
+      "answer": "$2\\ln(x^2 + 1) + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "4x/(x^2+1)",
+        "answer": "2 ln(x^2+1)"
+      }
+    },
+    {
+      "title": "การหาอนุพันธ์โดยลอการิทึม",
+      "problem": "หา $y'$ เมื่อ $y = \\frac{x\\sqrt{x^2 + 1}}{(x+1)^2}$, $x > 0$",
+      "steps": [
+        "$\\ln y = \\ln x + \\frac12\\ln(x^2+1) - 2\\ln(x+1)$",
+        "$\\frac{y'}{y} = \\frac1x + \\frac{x}{x^2+1} - \\frac{2}{x+1}$"
+      ],
+      "answer": "$y' = \\frac{x\\sqrt{x^2+1}}{(x+1)^2}\\left(\\frac1x + \\frac{x}{x^2+1} - \\frac{2}{x+1}\\right)$",
+      "verify": {
+        "kind": "derivative",
+        "f": "x sqrt(x^2+1)/(x+1)^2",
+        "answer": "x sqrt(x^2+1)/(x+1)^2 * (1/x + x/(x^2+1) - 2/(x+1))"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "$\\ln(a + b) = \\ln a + \\ln b$",
+      "right": "สมบัติใช้กับผลคูณ: $\\ln(ab) = \\ln a + \\ln b$"
+    },
+    {
+      "wrong": "$\\int\\frac{dx}{x} = \\ln x + C$ ทุก $x \\ne 0$",
+      "right": "ต้องเป็น $\\ln|x|$ เพื่อครอบคลุม $x < 0$"
+    },
+    {
+      "wrong": "$\\frac{d}{dx}\\ln(5x) = \\frac{1}{5x}$",
+      "right": "$= \\frac{5}{5x} = \\frac1x$"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "accumulation",
+      "f": "1/x",
+      "a": 1,
+      "b": 6
+    }
+  ],
+  "summary": [
+    "$\\ln x = \\int_1^x dt/t$",
+    "$(\\ln u)' = u'/u$",
+    "$\\int du/u = \\ln|u|$",
+    "ลอการิทึมเปลี่ยนผลคูณเป็นผลบวก"
+  ],
+  "review": [
+    {
+      "q": "$\\int_1^{e^3}\\frac{dx}{x}$?",
+      "a": "$3$"
+    },
+    {
+      "q": "$\\frac{d}{dx}\\ln|\\cos x|$?",
+      "a": "$-\\tan x$"
+    },
+    {
+      "q": "เขียน $2\\ln 3 - \\ln 6$ เป็น ln เดียว",
+      "a": "$\\ln\\frac{9}{6} = \\ln\\frac32$"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      378,
+      385
+    ],
+    "pdfIndex": 396,
+    "pdfPage": 397,
+    "verified": true,
+    "titleInBook": "Natural Logarithms"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

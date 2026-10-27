@@ -1,0 +1,192 @@
+{
+  "id": "calculus.8.3",
+  "section": "8.3",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "อินทิกรัลของฟังก์ชันตรีโกณมิติ",
+  "titleEn": "Trigonometric Integrals",
+  "objectives": [
+    {
+      "id": "8.3.odd_powers",
+      "text": "อินทิเกรต $\\sin^m x\\cos^n x$ เมื่อมีกำลังคี่"
+    },
+    {
+      "id": "8.3.even_powers",
+      "text": "อินทิเกรตกำลังคู่ด้วยสูตรลดกำลัง (half-angle)"
+    },
+    {
+      "id": "8.3.tan_sec",
+      "text": "อินทิเกรต $\\tan^m x\\sec^n x$"
+    },
+    {
+      "id": "8.3.products",
+      "text": "อินทิเกรตผลคูณ $\\sin mx\\cos nx$ ด้วยสูตรผลคูณเป็นผลบวก"
+    },
+    {
+      "id": "8.3.identities",
+      "text": "ใช้เอกลักษณ์ตรีโกณมาตรฐาน"
+    }
+  ],
+  "prerequisites": [
+    "5.5",
+    "8.1"
+  ],
+  "levels": {
+    "beginner": "อินทิกรัลของกำลังของ $\\sin$ และ $\\cos$ มีสูตรเลือกวิธีง่าย ๆ: ถ้ามีตัวไหนกำลังคี่ ให้เก็บตัวนั้นไว้หนึ่งตัวเพื่อเป็น $du$ ที่เหลือเปลี่ยนด้วย $\\sin^2 + \\cos^2 = 1$ ถ้ากำลังคู่ทั้งหมด ให้ใช้สูตรลดกำลังเปลี่ยน $\\sin^2$ เป็น $\\cos 2x$",
+    "standard": "$\\int\\sin^mx\\cos^nx\\,dx$: ถ้า $m$ คี่ แยก $\\sin x$ หนึ่งตัว เปลี่ยน $\\sin^2 = 1 - \\cos^2$ แล้ว $u = \\cos x$; ถ้า $n$ คี่ แยก $\\cos x$ แล้ว $u = \\sin x$; ถ้าคู่ทั้งคู่ ใช้ $\\sin^2x = \\frac{1-\\cos2x}{2}$, $\\cos^2x = \\frac{1+\\cos2x}{2}$ $\\int\\tan^mx\\sec^nx\\,dx$: ถ้า $n$ คู่ แยก $\\sec^2x$ แล้ว $u = \\tan x$; ถ้า $m$ คี่ แยก $\\sec x\\tan x$ แล้ว $u = \\sec x$ ผลคูณมุมต่าง: $\\sin A\\cos B = \\frac12[\\sin(A-B) + \\sin(A+B)]$, $\\sin A\\sin B = \\frac12[\\cos(A-B) - \\cos(A+B)]$, $\\cos A\\cos B = \\frac12[\\cos(A-B) + \\cos(A+B)]$",
+    "advanced": "สูตรลดทอน $\\int_0^{\\pi/2}\\sin^nx\\,dx = \\frac{n-1}{n}\\int_0^{\\pi/2}\\sin^{n-2}x\\,dx$ ให้สูตรของวอลลิส (Wallis) ความตั้งฉาก (orthogonality) $\\int_{-\\pi}^{\\pi}\\sin mx\\cos nx\\,dx = 0$ และ $\\int_{-\\pi}^\\pi\\sin mx\\sin nx\\,dx = 0$ ($m\\ne n$) เป็นพื้นฐานของอนุกรมฟูริเยร์ คำตอบของอินทิกรัลตรีโกณอาจดูต่างกันมากแต่ต่างกันเพียงค่าคงที่ เช่น $\\frac{\\sin^2x}{2}$ และ $-\\frac{\\cos 2x}{4}$"
+  },
+  "definitions": [
+    {
+      "term": "สูตรลดกำลัง",
+      "termEn": "Half-angle / power-reduction formulas",
+      "body": "$\\sin^2x = \\frac{1 - \\cos2x}{2}$, $\\cos^2x = \\frac{1 + \\cos2x}{2}$"
+    },
+    {
+      "term": "สูตรผลคูณเป็นผลบวก",
+      "termEn": "Product-to-sum identities",
+      "body": "เปลี่ยนผลคูณของ sin/cos มุมต่างกันเป็นผลบวก"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "เอกลักษณ์พีทาโกรัส",
+      "statement": "$\\sin^2x + \\cos^2x = 1$, $1 + \\tan^2x = \\sec^2x$"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\int\\sin^2x\\,dx = \\frac x2 - \\frac{\\sin2x}{4} + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int\\cos^2x\\,dx = \\frac x2 + \\frac{\\sin2x}{4} + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int\\tan^2x\\,dx = \\tan x - x + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int\\sec^3x\\,dx = \\tfrac12\\sec x\\tan x + \\tfrac12\\ln|\\sec x + \\tan x| + C",
+      "note": "ได้จาก Integration by Parts"
+    }
+  ],
+  "examples": [
+    {
+      "title": "กำลังคี่",
+      "problem": "หา $\\int\\sin^3x\\cos^2x\\,dx$",
+      "steps": [
+        "$\\sin^3x = (1 - \\cos^2x)\\sin x$",
+        "$u = \\cos x$: $-\\int(1 - u^2)u^2du$",
+        "$= -\\frac{u^3}{3} + \\frac{u^5}{5}$"
+      ],
+      "answer": "$-\\frac{\\cos^3x}{3} + \\frac{\\cos^5x}{5} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "sin(x)^3 cos(x)^2",
+        "answer": "-cos(x)^3/3 + cos(x)^5/5"
+      }
+    },
+    {
+      "title": "กำลังคู่",
+      "problem": "หา $\\int\\cos^2(3x)\\,dx$",
+      "steps": [
+        "$\\cos^2 3x = \\frac{1 + \\cos6x}{2}$"
+      ],
+      "answer": "$\\frac x2 + \\frac{\\sin6x}{12} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "cos(3x)^2",
+        "answer": "x/2 + sin(6x)/12"
+      }
+    },
+    {
+      "title": "tan และ sec",
+      "problem": "หา $\\int\\tan^2x\\sec^4x\\,dx$",
+      "steps": [
+        "$\\sec^4 = \\sec^2(1 + \\tan^2)$",
+        "$u = \\tan x$: $\\int u^2(1 + u^2)du$"
+      ],
+      "answer": "$\\frac{\\tan^3x}{3} + \\frac{\\tan^5x}{5} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "tan(x)^2 sec(x)^4",
+        "answer": "tan(x)^3/3 + tan(x)^5/5"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "$\\int\\sin^2x\\,dx = \\frac{\\sin^3x}{3}$",
+      "right": "ไม่มี $\\cos x$ เป็น $du$ ต้องใช้สูตรลดกำลัง"
+    },
+    {
+      "wrong": "ใช้ $u = \\sin x$ เมื่อกำลังของ $\\sin$ คี่",
+      "right": "เก็บตัวที่กำลังคี่ไว้เป็น $du$ จึงใช้ $u = \\cos x$"
+    },
+    {
+      "wrong": "คำตอบไม่ตรงกับเฉลยแปลว่าผิด",
+      "right": "คำตอบตรีโกณต่างรูปกันได้ ต่างกันด้วยค่าคงที่ ตรวจด้วยการหาอนุพันธ์"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "area",
+      "f": "sin(x)^2",
+      "a": 0,
+      "b": 3.14159
+    }
+  ],
+  "summary": [
+    "กำลังคี่: เก็บไว้หนึ่งตัว",
+    "กำลังคู่: ลดกำลัง",
+    "$\\sec$ คู่ → $u = \\tan$; $\\tan$ คี่ → $u = \\sec$",
+    "มุมต่าง → ผลคูณเป็นผลบวก"
+  ],
+  "review": [
+    {
+      "q": "$\\int_0^\\pi\\sin^2x\\,dx$?",
+      "a": "$\\frac\\pi2$"
+    },
+    {
+      "q": "$\\int\\sin 3x\\cos 3x\\,dx$?",
+      "a": "$-\\frac{\\cos 6x}{12} + C$"
+    },
+    {
+      "q": "$\\int\\tan x\\sec^2x\\,dx$?",
+      "a": "$\\frac{\\tan^2x}{2} + C$"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      460,
+      465
+    ],
+    "pdfIndex": 478,
+    "pdfPage": 479,
+    "verified": true,
+    "titleInBook": "Trigonometric Integrals"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

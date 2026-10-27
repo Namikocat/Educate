@@ -1,0 +1,211 @@
+{
+  "id": "calculus.5.5",
+  "section": "5.5",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "อินทิกรัลไม่จำกัดเขตและวิธีการแทนค่า",
+  "titleEn": "Indefinite Integrals and the Substitution Method",
+  "objectives": [
+    {
+      "id": "5.5.antiderivative",
+      "text": "หาอินทิกรัลไม่จำกัดเขตพื้นฐานและเขียนค่าคงที่ $C$"
+    },
+    {
+      "id": "5.5.basic",
+      "text": "ใช้ตารางอินทิกรัลพื้นฐานของกำลัง ตรีโกณ และเอกซ์โพเนนเชียล"
+    },
+    {
+      "id": "5.5.substitution",
+      "text": "ใช้วิธีการแทนค่า (substitution) $u = g(x)$"
+    },
+    {
+      "id": "5.5.chain_reverse",
+      "text": "มองการแทนค่าเป็นกฎลูกโซ่ย้อนกลับ"
+    },
+    {
+      "id": "5.5.verify",
+      "text": "ตรวจคำตอบโดยหาอนุพันธ์"
+    }
+  ],
+  "prerequisites": [
+    "5.4"
+  ],
+  "levels": {
+    "beginner": "อินทิกรัลไม่จำกัดเขต $\\int f(x)dx$ คือ \"ฟังก์ชันใดบ้างที่อนุพันธ์เป็น $f$\" คำตอบมีได้ไม่จำกัดเพราะบวกค่าคงที่ใดก็ได้ จึงเขียน $+C$ เสมอ วิธีการแทนค่าใช้เมื่อตัวถูกอินทิเกรตมี \"ฟังก์ชันข้างใน\" และ \"อนุพันธ์ของมัน\" อยู่ด้วยกัน เช่น $\\int 2x(x^2+1)^5 dx$ ให้ $u = x^2 + 1$ จะเหลือ $\\int u^5 du$ ซึ่งง่าย",
+    "standard": "ถ้า $u = g(x)$ หาอนุพันธ์ได้และ $f$ ต่อเนื่องบนเรนจ์ของ $g$ แล้ว $\\int f(g(x))g'(x)dx = \\int f(u)du$ ขั้นตอน: (1) เลือก $u$ ที่อนุพันธ์ปรากฏในตัวถูกอินทิเกรต (อาจต่างด้วยค่าคงที่) (2) หา $du = g'(x)dx$ (3) เขียนทุกอย่างเป็น $u$ ให้ไม่มี $x$ เหลือ (4) อินทิเกรต (5) แทนกลับ $u = g(x)$ (6) ตรวจโดยหาอนุพันธ์ ถ้า $du$ ต่างจากที่มีด้วยค่าคงที่ ให้คูณ/หารชดเชย แต่ถ้าต่างด้วยตัวแปร $x$ การเลือก $u$ นั้นใช้ไม่ได้",
+    "advanced": "การแทนค่าคือกฎลูกโซ่ $\\frac{d}{dx}F(g(x)) = F'(g(x))g'(x)$ อ่านย้อนกลับ ความเป็นจริงของสูตรอาศัยว่า $F$ เป็นปฏิยานุพันธ์ของ $f$ บนช่วงที่มี $g(x)$ อยู่ การเลือก $u$ ไม่ได้มีวิธีเดียว และบางครั้งการแทนค่าแบบ $x = h(u)$ (เช่น trig substitution ในบทที่ 8) ให้ผลดีกว่า ระวังโดเมน: $\\int \\frac{dx}{x} = \\ln|x| + C$ ต้องมีค่าสัมบูรณ์ และค่าคงที่ $C$ อาจต่างกันบนแต่ละช่วงที่แยกกัน"
+  },
+  "definitions": [
+    {
+      "term": "อินทิกรัลไม่จำกัดเขต",
+      "termEn": "Indefinite integral",
+      "body": "$\\int f(x)dx = F(x) + C$ คือเซตของปฏิยานุพันธ์ทั้งหมดของ $f$"
+    },
+    {
+      "term": "ค่าคงที่ของการอินทิเกรต",
+      "termEn": "Constant of integration",
+      "body": "$C$ แทนค่าคงที่ใด ๆ เพราะอนุพันธ์ของค่าคงที่เป็นศูนย์"
+    },
+    {
+      "term": "วิธีการแทนค่า",
+      "termEn": "Substitution method",
+      "body": "$\\int f(g(x))g'(x)dx = \\int f(u)du$ เมื่อ $u = g(x)$"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "กฎการแทนค่า (Substitution Rule)",
+      "statement": "$\\int f(g(x))g'(x)\\,dx = \\int f(u)\\,du$, $u = g(x)$",
+      "conditions": "g หาอนุพันธ์ได้ และ f ต่อเนื่องบนเรนจ์ของ g"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\int x^n dx = \\frac{x^{n+1}}{n+1} + C,\\ n\\ne -1",
+      "note": "กฎกำลัง"
+    },
+    {
+      "tex": "\\int \\sin kx\\,dx = -\\frac{\\cos kx}{k} + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int \\cos kx\\,dx = \\frac{\\sin kx}{k} + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int \\sec^2 x\\,dx = \\tan x + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int e^{kx}dx = \\frac{e^{kx}}{k} + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int \\frac{dx}{x} = \\ln|x| + C",
+      "note": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "การแทนค่าพื้นฐาน",
+      "problem": "หา $\\int 2x(x^2 + 1)^5 dx$",
+      "steps": [
+        "ให้ $u = x^2 + 1$, $du = 2x\\,dx$",
+        "$\\int u^5 du = \\frac{u^6}{6} + C$",
+        "แทนกลับ"
+      ],
+      "answer": "$\\frac{(x^2+1)^6}{6} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "2x(x^2+1)^5",
+        "answer": "(x^2+1)^6/6"
+      }
+    },
+    {
+      "title": "ชดเชยค่าคงที่",
+      "problem": "หา $\\int x^2\\sqrt{x^3 + 4}\\,dx$",
+      "steps": [
+        "ให้ $u = x^3 + 4$, $du = 3x^2dx$ ดังนั้น $x^2dx = \\frac{du}{3}$",
+        "$\\frac13\\int u^{1/2}du = \\frac13\\cdot\\frac23 u^{3/2}$"
+      ],
+      "answer": "$\\frac29(x^3+4)^{3/2} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "x^2 sqrt(x^3+4)",
+        "answer": "(2/9)(x^3+4)^(3/2)"
+      }
+    },
+    {
+      "title": "ตรีโกณ",
+      "problem": "หา $\\int \\sin^3 x\\cos x\\,dx$",
+      "steps": [
+        "ให้ $u = \\sin x$, $du = \\cos x\\,dx$",
+        "$\\int u^3 du = \\frac{u^4}{4}$"
+      ],
+      "answer": "$\\frac{\\sin^4 x}{4} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "sin(x)^3 cos(x)",
+        "answer": "sin(x)^4/4"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "ลืม $+C$",
+      "right": "อินทิกรัลไม่จำกัดเขตต้องมี $+C$ เสมอ"
+    },
+    {
+      "wrong": "แทน $u$ แล้วยังเหลือ $x$ ในอินทิกรัล",
+      "right": "ต้องเปลี่ยนเป็น $u$ ทั้งหมด ถ้าทำไม่ได้ให้เลือก $u$ ใหม่"
+    },
+    {
+      "wrong": "$\\int (x^2+1)^5dx = \\frac{(x^2+1)^6}{6} + C$",
+      "right": "ไม่มี $2x$ ให้เป็น $du$ ต้องขยายหรือใช้วิธีอื่น"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "function_plot",
+      "expressions": [
+        "2*x*(x^2+1)^5",
+        "(x^2+1)^6/6"
+      ],
+      "domain": [
+        -1.2,
+        1.2
+      ]
+    }
+  ],
+  "summary": [
+    "$\\int f = F + C$",
+    "เลือก $u$ ที่อนุพันธ์ของมันอยู่ในตัวถูกอินทิเกรต",
+    "เปลี่ยนเป็น $u$ ทั้งหมดก่อนอินทิเกรต",
+    "แทนกลับและตรวจโดยหาอนุพันธ์"
+  ],
+  "review": [
+    {
+      "q": "$\\int \\cos(3x)dx$ = ?",
+      "a": "$\\frac{\\sin 3x}{3} + C$"
+    },
+    {
+      "q": "ถ้า $u = 5x - 2$ แล้ว $dx$ = ?",
+      "a": "$\\frac{du}{5}$"
+    },
+    {
+      "q": "ทำไมการแทนค่าเรียกว่ากฎลูกโซ่ย้อนกลับ?",
+      "a": "เพราะ $\\frac{d}{dx}F(g(x)) = F'(g(x))g'(x)$ คือรูปตัวถูกอินทิเกรตพอดี"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      289,
+      295
+    ],
+    "pdfIndex": 307,
+    "pdfPage": 308,
+    "verified": true,
+    "titleInBook": "Indefinite Integrals and the Substitution Method"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

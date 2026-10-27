@@ -1,0 +1,602 @@
+{
+  "subject": "calculus",
+  "version": "1.0.0",
+  "generated": "2026-10-26",
+  "sections": [
+    {
+      "section": "5.1",
+      "title": "Area and Estimating with Finite Sums",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 8,
+      "objectivesWithPractice": 8,
+      "objectivesWithoutPractice": [],
+      "families": 6,
+      "familyIds": [
+        "calc.5.1.left_sum",
+        "calc.5.1.right_sum",
+        "calc.5.1.midpoint_sum",
+        "calc.5.1.upper_sum",
+        "calc.5.1.signed_midpoint",
+        "calc.5.1.estimate_error"
+      ],
+      "visualizations": [
+        "riemann"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        248,
+        257
+      ]
+    },
+    {
+      "section": "5.2",
+      "title": "Sigma Notation and Limits of Finite Sums",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 2,
+      "examplesVerified": 2,
+      "objectives": 5,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [],
+      "families": 6,
+      "familyIds": [
+        "calc.5.2.evaluate_sum",
+        "calc.5.2.closed_form",
+        "calc.5.2.sum_laws",
+        "calc.5.2.riemann_limit",
+        "calc.5.2.shifted_index",
+        "calc.5.2.telescoping"
+      ],
+      "visualizations": [
+        "riemann"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        258,
+        264
+      ]
+    },
+    {
+      "section": "5.3",
+      "title": "The Definite Integral",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 7,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [
+        "5.3.definition",
+        "5.3.integrability"
+      ],
+      "families": 6,
+      "familyIds": [
+        "calc.5.3.geometric_semicircle",
+        "calc.5.3.linearity",
+        "calc.5.3.additivity",
+        "calc.5.3.signed_linear",
+        "calc.5.3.average_value",
+        "calc.5.3.piecewise"
+      ],
+      "visualizations": [
+        "area"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        265,
+        277
+      ]
+    },
+    {
+      "section": "5.4",
+      "title": "The Fundamental Theorem of Calculus",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 5,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [],
+      "families": 6,
+      "familyIds": [
+        "calc.5.4.ftc1_basic",
+        "calc.5.4.ftc1_chain",
+        "calc.5.4.ftc1_both_limits",
+        "calc.5.4.ftc2_poly",
+        "calc.5.4.ftc2_transcendental",
+        "calc.5.4.total_area"
+      ],
+      "visualizations": [
+        "accumulation",
+        "area"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        278,
+        288
+      ]
+    },
+    {
+      "section": "5.5",
+      "title": "Indefinite Integrals and the Substitution Method",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 5,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [],
+      "families": 7,
+      "familyIds": [
+        "calc.5.5.linear_inner",
+        "calc.5.5.power_chain",
+        "calc.5.5.trig_power",
+        "calc.5.5.exp_sub",
+        "calc.5.5.log_sub",
+        "calc.5.5.sqrt_sub",
+        "calc.5.5.trig_inner"
+      ],
+      "visualizations": [
+        "function_plot"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        289,
+        295
+      ]
+    },
+    {
+      "section": "5.6",
+      "title": "Definite Integral Substitutions and the Area Between Curves",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 6,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [
+        "5.6.symmetry"
+      ],
+      "families": 8,
+      "familyIds": [
+        "calc.5.6.definite_sub_poly",
+        "calc.5.6.definite_sub_trig",
+        "calc.5.6.definite_sub_exp",
+        "calc.5.6.area_parabola_line",
+        "calc.5.6.area_two_parabolas",
+        "calc.5.6.area_wrt_y",
+        "calc.5.6.area_sign_change",
+        "calc.5.6.area_sqrt_line"
+      ],
+      "visualizations": [
+        "area_between"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        296,
+        313
+      ]
+    },
+    {
+      "section": "6.1",
+      "title": "Volumes Using Cross-Sections",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 4,
+      "objectivesWithPractice": 4,
+      "objectivesWithoutPractice": [],
+      "families": 7,
+      "familyIds": [
+        "calc.6.1.disk_power",
+        "calc.6.1.disk_sphere_segment",
+        "calc.6.1.washer_line_parabola",
+        "calc.6.1.washer_about_line",
+        "calc.6.1.cross_section_triangle",
+        "calc.6.1.cross_section_parabola",
+        "calc.6.1.disk_about_y"
+      ],
+      "visualizations": [
+        "cross_section",
+        "revolution"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        314,
+        324
+      ]
+    },
+    {
+      "section": "6.2",
+      "title": "Volumes Using Cylindrical Shells",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 2,
+      "examplesVerified": 2,
+      "objectives": 4,
+      "objectivesWithPractice": 4,
+      "objectivesWithoutPractice": [],
+      "families": 5,
+      "familyIds": [
+        "calc.6.2.shell_poly",
+        "calc.6.2.shell_between",
+        "calc.6.2.shell_about_x",
+        "calc.6.2.shell_vertical_line",
+        "calc.6.2.shell_transcendental"
+      ],
+      "visualizations": [
+        "revolution"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        325,
+        332
+      ]
+    },
+    {
+      "section": "6.3",
+      "title": "Arc Length",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 2,
+      "examplesVerified": 2,
+      "objectives": 4,
+      "objectivesWithPractice": 3,
+      "objectivesWithoutPractice": [
+        "6.3.smooth"
+      ],
+      "families": 6,
+      "familyIds": [
+        "calc.6.3.arc_three_halves",
+        "calc.6.3.arc_perfect_square",
+        "calc.6.3.arc_log_cos",
+        "calc.6.3.arc_line",
+        "calc.6.3.arc_x_of_y",
+        "calc.6.3.arc_catenary"
+      ],
+      "visualizations": [
+        "arc"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        333,
+        337
+      ]
+    },
+    {
+      "section": "6.4",
+      "title": "Areas of Surfaces of Revolution",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 2,
+      "examplesVerified": 2,
+      "objectives": 4,
+      "objectivesWithPractice": 3,
+      "objectivesWithoutPractice": [
+        "6.4.vs_volume"
+      ],
+      "families": 5,
+      "familyIds": [
+        "calc.6.4.surface_cone",
+        "calc.6.4.surface_sphere_zone",
+        "calc.6.4.surface_sqrt",
+        "calc.6.4.surface_cubic",
+        "calc.6.4.surface_about_y"
+      ],
+      "visualizations": [
+        "revolution",
+        "surface"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        338,
+        343
+      ]
+    },
+    {
+      "section": "7.1",
+      "title": "Inverse Functions and Their Derivatives",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 2,
+      "examplesVerified": 2,
+      "objectives": 5,
+      "objectivesWithPractice": 4,
+      "objectivesWithoutPractice": [
+        "7.1.reflection"
+      ],
+      "families": 6,
+      "familyIds": [
+        "calc.7.1.inverse_linear",
+        "calc.7.1.inverse_rational",
+        "calc.7.1.inverse_power",
+        "calc.7.1.inverse_derivative_poly",
+        "calc.7.1.inverse_derivative_trans",
+        "calc.7.1.one_to_one_interval"
+      ],
+      "visualizations": [
+        "inverse"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        370,
+        377
+      ]
+    },
+    {
+      "section": "7.2",
+      "title": "Natural Logarithms",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 5,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [],
+      "families": 6,
+      "familyIds": [
+        "calc.7.2.ln_chain",
+        "calc.7.2.log_differentiation",
+        "calc.7.2.ln_integral",
+        "calc.7.2.ln_definite",
+        "calc.7.2.log_properties",
+        "calc.7.2.tan_integral"
+      ],
+      "visualizations": [
+        "accumulation"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        378,
+        385
+      ]
+    },
+    {
+      "section": "7.3",
+      "title": "Exponential Functions",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 4,
+      "examplesVerified": 4,
+      "objectives": 5,
+      "objectivesWithPractice": 4,
+      "objectivesWithoutPractice": [
+        "7.3.exp"
+      ],
+      "families": 7,
+      "familyIds": [
+        "calc.7.3.exp_derivative",
+        "calc.7.3.exp_integral",
+        "calc.7.3.general_base_derivative",
+        "calc.7.3.general_base_integral",
+        "calc.7.3.solve_exponential",
+        "calc.7.3.variable_power",
+        "calc.7.3.log_base_derivative"
+      ],
+      "visualizations": [
+        "inverse"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        386,
+        396
+      ]
+    },
+    {
+      "section": "7.5",
+      "title": "Indeterminate Forms and L'Hôpital's Rule",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 4,
+      "examplesVerified": 4,
+      "objectives": 7,
+      "objectivesWithPractice": 7,
+      "objectivesWithoutPractice": [],
+      "families": 8,
+      "familyIds": [
+        "calc.7.5.lh_polynomial",
+        "calc.7.5.lh_trig",
+        "calc.7.5.lh_exp",
+        "calc.7.5.lh_infinity",
+        "calc.7.5.lh_zero_times_inf",
+        "calc.7.5.lh_one_to_inf",
+        "calc.7.5.lh_not_applicable",
+        "calc.7.5.conjugate_alternative"
+      ],
+      "visualizations": [
+        "function_plot"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        407,
+        415
+      ]
+    },
+    {
+      "section": "8.1",
+      "title": "Using Basic Integration Formulas",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 6,
+      "objectivesWithPractice": 6,
+      "objectivesWithoutPractice": [],
+      "families": 6,
+      "familyIds": [
+        "calc.8.1.split_fraction",
+        "calc.8.1.complete_square_arctan",
+        "calc.8.1.arcsin_form",
+        "calc.8.1.long_division",
+        "calc.8.1.trig_square",
+        "calc.8.1.exp_fraction"
+      ],
+      "visualizations": [
+        "function_plot"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        447,
+        451
+      ]
+    },
+    {
+      "section": "8.2",
+      "title": "Integration by Parts",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 4,
+      "examplesVerified": 4,
+      "objectives": 6,
+      "objectivesWithPractice": 6,
+      "objectivesWithoutPractice": [],
+      "families": 7,
+      "familyIds": [
+        "calc.8.2.poly_exp",
+        "calc.8.2.poly_trig",
+        "calc.8.2.poly_log",
+        "calc.8.2.single_function",
+        "calc.8.2.repeated",
+        "calc.8.2.cyclic",
+        "calc.8.2.definite_parts"
+      ],
+      "visualizations": [
+        "area"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        452,
+        459
+      ]
+    },
+    {
+      "section": "8.3",
+      "title": "Trigonometric Integrals",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 5,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [],
+      "families": 7,
+      "familyIds": [
+        "calc.8.3.odd_sine",
+        "calc.8.3.odd_cosine",
+        "calc.8.3.even_powers",
+        "calc.8.3.tan_sec_even",
+        "calc.8.3.tan_odd_sec",
+        "calc.8.3.product_to_sum",
+        "calc.8.3.wallis_definite"
+      ],
+      "visualizations": [
+        "area"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        460,
+        465
+      ]
+    },
+    {
+      "section": "8.4",
+      "title": "Trigonometric Substitutions",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 2,
+      "examplesVerified": 2,
+      "objectives": 4,
+      "objectivesWithPractice": 4,
+      "objectivesWithoutPractice": [],
+      "families": 7,
+      "familyIds": [
+        "calc.8.4.over_x2_sqrt_minus",
+        "calc.8.4.x2_over_sqrt_minus",
+        "calc.8.4.over_plus_32",
+        "calc.8.4.over_sqrt_plus",
+        "calc.8.4.sqrt_minus_over_x",
+        "calc.8.4.over_x2_sqrt_plus",
+        "calc.8.4.definite_circle"
+      ],
+      "visualizations": [
+        "area"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        466,
+        470
+      ]
+    },
+    {
+      "section": "8.5",
+      "title": "Integration of Rational Functions by Partial Fractions",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 3,
+      "examplesVerified": 3,
+      "objectives": 5,
+      "objectivesWithPractice": 5,
+      "objectivesWithoutPractice": [],
+      "families": 6,
+      "familyIds": [
+        "calc.8.5.two_linear",
+        "calc.8.5.three_linear",
+        "calc.8.5.repeated_linear",
+        "calc.8.5.irreducible_quadratic",
+        "calc.8.5.improper_rational",
+        "calc.8.5.definite"
+      ],
+      "visualizations": [
+        "function_plot"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        471,
+        478
+      ]
+    },
+    {
+      "section": "8.8",
+      "title": "Improper Integrals",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 4,
+      "examplesVerified": 4,
+      "objectives": 6,
+      "objectivesWithPractice": 6,
+      "objectivesWithoutPractice": [],
+      "families": 7,
+      "familyIds": [
+        "calc.8.8.p_integral_infinity",
+        "calc.8.8.exp_decay",
+        "calc.8.8.p_integral_zero",
+        "calc.8.8.arctan_both",
+        "calc.8.8.interior_singularity",
+        "calc.8.8.comparison",
+        "calc.8.8.log_improper"
+      ],
+      "visualizations": [
+        "improper"
+      ],
+      "sourceVerified": true,
+      "printedPages": [
+        494,
+        504
+      ]
+    }
+  ],
+  "errors": [],
+  "totals": {
+    "sections": 20,
+    "lessons": 20,
+    "machineValidated": 20,
+    "families": 129,
+    "objectives": 106,
+    "objectivesWithPractice": 99,
+    "humanReviewed": 0
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "subject": "sample-linear-algebra",
+  "version": "0.1.0",
+  "generated": "2026-10-26",
+  "sections": [
+    {
+      "section": "la.1",
+      "title": "Dot Product and 2×2 Determinants",
+      "lesson": true,
+      "status": "machine-validated",
+      "examples": 2,
+      "examplesVerified": 2,
+      "objectives": 2,
+      "objectivesWithPractice": 2,
+      "objectivesWithoutPractice": [],
+      "families": 2,
+      "familyIds": [
+        "la.1.determinant_2x2",
+        "la.1.dot_product"
+      ],
+      "visualizations": [],
+      "sourceVerified": false,
+      "printedPages": null
+    }
+  ],
+  "errors": [],
+  "totals": {
+    "sections": 1,
+    "lessons": 1,
+    "machineValidated": 1,
+    "families": 2,
+    "objectives": 2,
+    "objectivesWithPractice": 2,
+    "humanReviewed": 0
+  }
+}

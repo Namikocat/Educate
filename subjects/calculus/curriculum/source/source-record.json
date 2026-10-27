@@ -1,0 +1,36 @@
+{
+  "filename": "thomas-calculus-14e.pdf",
+  "sha256": "acc49c2cd143c4981d2a06d0e0623274cfe0f51ec4b0a84cbadeb560c313574c",
+  "bytes": 98064012,
+  "page_count": 1212,
+  "pdf_metadata": {
+    "format": "PDF 1.5",
+    "producer": "iOS Version 27.0 (Build 24A5380h) Quartz PDFContext",
+    "creationDate": "D:20260725093216Z00'00'",
+    "modDate": "D:20260725093216Z00'00'"
+  },
+  "isbn": [
+    "0-13-443898-1",
+    "0-13-443909-0",
+    "0134438981",
+    "978-0-13-443898-6",
+    "978-0-13-443909-9",
+    "9780134438986"
+  ],
+  "identification": {
+    "title_match": true,
+    "edition_match": true,
+    "authors_found": [
+      "THOMAS",
+      "HASS",
+      "HEIL",
+      "WEIR"
+    ]
+  },
+  "book": "Thomas' Calculus, 14th Edition (Thomas, Hass, Heil, Weir)",
+  "contents_pdf_indices": [
+    3,
+    4,
+    5
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "math-engine-http",
+      "runtimeExecutable": "D:/Educate/services/math-engine/.venv/Scripts/python.exe",
+      "runtimeArgs": ["-X", "utf8", "-m", "unilearn_math.server", "--http", "8765"],
+      "cwd": "services/math-engine",
+      "port": 8765
+    },
+    {
+      "name": "web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "apps/desktop",
+      "port": 1420
+    }
+  ]
+}

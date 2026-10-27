@@ -1,0 +1,305 @@
+{
+  "source_sha256": "acc49c2cd143c4981d2a06d0e0623274cfe0f51ec4b0a84cbadeb560c313574c",
+  "sections": [
+    {
+      "section": "5.1",
+      "title": "Area and Estimating with Finite Sums",
+      "printed_page": 248,
+      "contents_pdf_index": 4,
+      "pdf_index": 266,
+      "pdf_page_number": 267,
+      "offset": 18,
+      "evidence": [
+        "printed page number 248 found in header/footer of PDF index 266",
+        "section heading '5.1 Area and Estimating with Finit' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 257
+    },
+    {
+      "section": "5.2",
+      "title": "Sigma Notation and Limits of Finite Sums",
+      "printed_page": 258,
+      "contents_pdf_index": 4,
+      "pdf_index": 276,
+      "pdf_page_number": 277,
+      "offset": 18,
+      "evidence": [
+        "printed page number 258 found in header/footer of PDF index 276",
+        "section heading '5.2 Sigma Notation and Limits of F' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 264
+    },
+    {
+      "section": "5.3",
+      "title": "The Definite Integral",
+      "printed_page": 265,
+      "contents_pdf_index": 4,
+      "pdf_index": 283,
+      "pdf_page_number": 284,
+      "offset": 18,
+      "evidence": [
+        "printed page number 265 found in header/footer of PDF index 283",
+        "section heading '5.3 The Definite Integral' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 277
+    },
+    {
+      "section": "5.4",
+      "title": "The Fundamental Theorem of Calculus",
+      "printed_page": 278,
+      "contents_pdf_index": 4,
+      "pdf_index": 296,
+      "pdf_page_number": 297,
+      "offset": 18,
+      "evidence": [
+        "printed page number 278 found in header/footer of PDF index 296",
+        "section heading '5.4 The Fundamental Theorem of Cal' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 288
+    },
+    {
+      "section": "5.5",
+      "title": "Indefinite Integrals and the Substitution Method",
+      "printed_page": 289,
+      "contents_pdf_index": 4,
+      "pdf_index": 307,
+      "pdf_page_number": 308,
+      "offset": 18,
+      "evidence": [
+        "printed page number 289 found in header/footer of PDF index 307",
+        "section heading '5.5 Indefinite Integrals and the S' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 295
+    },
+    {
+      "section": "5.6",
+      "title": "Definite Integral Substitutions and the Area Between Curves",
+      "printed_page": 296,
+      "contents_pdf_index": 4,
+      "pdf_index": 314,
+      "pdf_page_number": 315,
+      "offset": 18,
+      "evidence": [
+        "printed page number 296 found in header/footer of PDF index 314",
+        "section heading '5.6 Definite Integral Substitution' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 313
+    },
+    {
+      "section": "6.1",
+      "title": "Volumes Using Cross-Sections",
+      "printed_page": 314,
+      "contents_pdf_index": 4,
+      "pdf_index": 332,
+      "pdf_page_number": 333,
+      "offset": 18,
+      "evidence": [
+        "printed page number 314 found in header/footer of PDF index 332",
+        "section heading '6.1 Volumes Using Cross-Sections' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 324
+    },
+    {
+      "section": "6.2",
+      "title": "Volumes Using Cylindrical Shells",
+      "printed_page": 325,
+      "contents_pdf_index": 4,
+      "pdf_index": 343,
+      "pdf_page_number": 344,
+      "offset": 18,
+      "evidence": [
+        "printed page number 325 found in header/footer of PDF index 343",
+        "section heading '6.2 Volumes Using Cylindrical Shel' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 332
+    },
+    {
+      "section": "6.3",
+      "title": "Arc Length",
+      "printed_page": 333,
+      "contents_pdf_index": 4,
+      "pdf_index": 351,
+      "pdf_page_number": 352,
+      "offset": 18,
+      "evidence": [
+        "printed page number 333 found in header/footer of PDF index 351",
+        "section heading '6.3 Arc Length' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 337
+    },
+    {
+      "section": "6.4",
+      "title": "Areas of Surfaces of Revolution",
+      "printed_page": 338,
+      "contents_pdf_index": 4,
+      "pdf_index": 356,
+      "pdf_page_number": 357,
+      "offset": 18,
+      "evidence": [
+        "printed page number 338 found in header/footer of PDF index 356",
+        "section heading '6.4 Areas of Surfaces of Revolutio' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 343
+    },
+    {
+      "section": "7.1",
+      "title": "Inverse Functions and Their Derivatives",
+      "printed_page": 370,
+      "contents_pdf_index": 4,
+      "pdf_index": 388,
+      "pdf_page_number": 389,
+      "offset": 18,
+      "evidence": [
+        "printed page number 370 found in header/footer of PDF index 388",
+        "section heading '7.1 Inverse Functions and Their De' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 377
+    },
+    {
+      "section": "7.2",
+      "title": "Natural Logarithms",
+      "printed_page": 378,
+      "contents_pdf_index": 4,
+      "pdf_index": 396,
+      "pdf_page_number": 397,
+      "offset": 18,
+      "evidence": [
+        "printed page number 378 found in header/footer of PDF index 396",
+        "section heading '7.2 Natural Logarithms' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 385
+    },
+    {
+      "section": "7.3",
+      "title": "Exponential Functions",
+      "printed_page": 386,
+      "contents_pdf_index": 4,
+      "pdf_index": 404,
+      "pdf_page_number": 405,
+      "offset": 18,
+      "evidence": [
+        "printed page number 386 found in header/footer of PDF index 404",
+        "section heading '7.3 Exponential Functions' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 396
+    },
+    {
+      "section": "7.5",
+      "title": "Indeterminate Forms and L’Hôpital’s Rule",
+      "printed_page": 407,
+      "contents_pdf_index": 4,
+      "pdf_index": 425,
+      "pdf_page_number": 426,
+      "offset": 18,
+      "evidence": [
+        "printed page number 407 found in header/footer of PDF index 425",
+        "section heading '7.5 Indeterminate Forms and L’Hôpi' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 415
+    },
+    {
+      "section": "8.1",
+      "title": "Using Basic Integration Formulas",
+      "printed_page": 447,
+      "contents_pdf_index": 5,
+      "pdf_index": 465,
+      "pdf_page_number": 466,
+      "offset": 18,
+      "evidence": [
+        "printed page number 447 found in header/footer of PDF index 465",
+        "section heading '8.1 Using Basic Integration Formul' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 451
+    },
+    {
+      "section": "8.2",
+      "title": "Integration by Parts",
+      "printed_page": 452,
+      "contents_pdf_index": 5,
+      "pdf_index": 470,
+      "pdf_page_number": 471,
+      "offset": 18,
+      "evidence": [
+        "printed page number 452 found in header/footer of PDF index 470",
+        "section heading '8.2 Integration by Parts' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 459
+    },
+    {
+      "section": "8.3",
+      "title": "Trigonometric Integrals",
+      "printed_page": 460,
+      "contents_pdf_index": 5,
+      "pdf_index": 478,
+      "pdf_page_number": 479,
+      "offset": 18,
+      "evidence": [
+        "printed page number 460 found in header/footer of PDF index 478",
+        "section heading '8.3 Trigonometric Integrals' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 465
+    },
+    {
+      "section": "8.4",
+      "title": "Trigonometric Substitutions",
+      "printed_page": 466,
+      "contents_pdf_index": 5,
+      "pdf_index": 484,
+      "pdf_page_number": 485,
+      "offset": 18,
+      "evidence": [
+        "printed page number 466 found in header/footer of PDF index 484",
+        "section heading '8.4 Trigonometric Substitutions' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 470
+    },
+    {
+      "section": "8.5",
+      "title": "Integration of Rational Functions by Partial Fractions",
+      "printed_page": 471,
+      "contents_pdf_index": 5,
+      "pdf_index": 489,
+      "pdf_page_number": 490,
+      "offset": 18,
+      "evidence": [
+        "printed page number 471 found in header/footer of PDF index 489",
+        "section heading '8.5 Integration of Rational Functi' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 478
+    },
+    {
+      "section": "8.8",
+      "title": "Improper Integrals",
+      "printed_page": 494,
+      "contents_pdf_index": 5,
+      "pdf_index": 512,
+      "pdf_page_number": 513,
+      "offset": 18,
+      "evidence": [
+        "printed page number 494 found in header/footer of PDF index 512",
+        "section heading '8.8 Improper Integrals' found in page body"
+      ],
+      "status": "verified",
+      "printed_end_page": 504
+    }
+  ]
+}

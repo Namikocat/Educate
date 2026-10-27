@@ -1,0 +1,16 @@
+{
+  "name": "unilearn-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "UniLearn Studio - offline-first multi-subject university learning platform (Windows, Tauri 2)",
+  "scripts": {
+    "dev": "npm --prefix apps/desktop run tauri dev",
+    "test": "npm run test:py && npm run test:web && npm run test:rust",
+    "test:py": "cd services/math-engine && .venv\Scripts\python -X utf8 -m pytest -q",
+    "test:web": "npm --prefix apps/desktop run test",
+    "test:rust": "cd apps/desktop/src-tauri && cargo test",
+    "validate:content": "services\math-engine\.venv\Scripts\python -X utf8 tools/curriculum-validator/validate.py subjects/calculus --write",
+    "benchmark": "services\math-engine\.venv\Scripts\python -X utf8 tools/problem-benchmark/benchmark.py 120 docs/reports/benchmark-report.json",
+    "release": "powershell -ExecutionPolicy Bypass -File scripts/build-release.ps1"
+  }
+}

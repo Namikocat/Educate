@@ -1,0 +1,220 @@
+{
+  "id": "calculus.7.5",
+  "section": "7.5",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "รูปแบบไม่กำหนดและกฎของโลปิตาล",
+  "titleEn": "Indeterminate Forms and L'Hôpital's Rule",
+  "objectives": [
+    {
+      "id": "7.5.conditions",
+      "text": "ตรวจเงื่อนไขก่อนใช้กฎของโลปิตาล (L'Hôpital's Rule)"
+    },
+    {
+      "id": "7.5.zero_over_zero",
+      "text": "หาลิมิตรูปแบบ $0/0$"
+    },
+    {
+      "id": "7.5.inf_over_inf",
+      "text": "หาลิมิตรูปแบบ $\\infty/\\infty$"
+    },
+    {
+      "id": "7.5.other_forms",
+      "text": "แปลงรูป $0\\cdot\\infty$, $\\infty - \\infty$, $1^\\infty$, $0^0$, $\\infty^0$"
+    },
+    {
+      "id": "7.5.repeated",
+      "text": "ใช้กฎซ้ำเมื่อยังเป็นรูปแบบไม่กำหนด"
+    },
+    {
+      "id": "7.5.not_applicable",
+      "text": "รู้ว่าเมื่อใดใช้กฎไม่ได้"
+    },
+    {
+      "id": "7.5.alternatives",
+      "text": "ใช้วิธีทางเลือก เช่น แยกตัวประกอบหรือคอนจูเกต"
+    }
+  ],
+  "prerequisites": [
+    "7.2",
+    "7.3"
+  ],
+  "levels": {
+    "beginner": "เมื่อแทนค่าในลิมิตแล้วได้ $\\frac00$ หรือ $\\frac\\infty\\infty$ เรายังตอบไม่ได้ เพราะเศษและส่วนแข่งกันเข้าหาศูนย์ (หรือโต) กฎของโลปิตาลบอกว่าให้เปรียบเทียบ \"ความเร็ว\" แทน คือหาอนุพันธ์ของเศษและส่วนแยกกัน แล้วหาลิมิตใหม่ แต่ต้องตรวจก่อนทุกครั้งว่าเป็นรูปแบบไม่กำหนดจริง",
+    "standard": "กฎของโลปิตาล: ถ้า $f(a) = g(a) = 0$ (หรือทั้งสองเข้าหา $\\pm\\infty$), $f, g$ หาอนุพันธ์ได้บนช่วงเปิดที่มี $a$ (ยกเว้นที่ $a$) และ $g'(x) \\ne 0$ ใกล้ $a$ แล้ว $\\lim_{x\\to a}\\frac{f}{g} = \\lim_{x\\to a}\\frac{f'}{g'}$ เมื่อลิมิตทางขวามีค่า (หรือเป็น $\\pm\\infty$) ใช้กับ $x\\to\\pm\\infty$ และลิมิตด้านเดียวได้ รูป $0\\cdot\\infty$ ให้ย้ายตัวหนึ่งเป็นตัวส่วน; $\\infty - \\infty$ ให้รวมเศษส่วนหรือคูณคอนจูเกต; $1^\\infty, 0^0, \\infty^0$ ให้ใส่ $\\ln$ ก่อน แล้ว $\\lim f = e^{\\lim\\ln f}$",
+    "advanced": "บทพิสูจน์ใช้ทฤษฎีบทค่าเฉลี่ยของโคชี (Cauchy's Mean Value Theorem) ถ้า $\\lim f'/g'$ ไม่มีค่า ไม่ได้แปลว่า $\\lim f/g$ ไม่มีค่า เช่น $\\lim_{x\\to\\infty}\\frac{x + \\sin x}{x} = 1$ แต่ $\\frac{1 + \\cos x}{1}$ ไม่มีลิมิต การใช้กฎเมื่อไม่ใช่รูปแบบไม่กำหนดให้ผลผิด เช่น $\\lim_{x\\to0}\\frac{x+1}{x+2} = \\frac12$ แต่ถ้าหาอนุพันธ์จะได้ $1$ บางครั้งการใช้ซ้ำวนไม่สิ้นสุด (เช่น $\\frac{\\sqrt{x^2+1}}{x}$) ควรใช้พีชคณิตแทน"
+  },
+  "definitions": [
+    {
+      "term": "รูปแบบไม่กำหนด",
+      "termEn": "Indeterminate form",
+      "body": "$\\frac00, \\frac\\infty\\infty, 0\\cdot\\infty, \\infty - \\infty, 1^\\infty, 0^0, \\infty^0$ ที่การแทนค่าไม่บอกค่าลิมิต"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "กฎของโลปิตาล",
+      "statement": "$\\lim_{x\\to a}\\frac{f(x)}{g(x)} = \\lim_{x\\to a}\\frac{f'(x)}{g'(x)}$",
+      "conditions": "รูป 0/0 หรือ ±∞/±∞; f, g หาอนุพันธ์ได้ใกล้ a; g' ≠ 0 ใกล้ a; ลิมิตทางขวามีค่าหรือเป็น ±∞"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\lim f^g = e^{\\lim g\\ln f}",
+      "note": "สำหรับ $1^\\infty, 0^0, \\infty^0$"
+    },
+    {
+      "tex": "\\lim_{x\\to\\infty}\\left(1 + \\frac{a}{x}\\right)^{bx} = e^{ab}",
+      "note": ""
+    },
+    {
+      "tex": "\\lim_{x\\to\\infty}\\frac{x^n}{e^x} = 0,\\quad \\lim_{x\\to\\infty}\\frac{\\ln x}{x^p} = 0\\ (p>0)",
+      "note": "อัตราการเติบโต"
+    }
+  ],
+  "examples": [
+    {
+      "title": "รูป 0/0",
+      "problem": "หา $\\lim_{x\\to0}\\frac{\\sin 3x}{x}$",
+      "steps": [
+        "แทนค่า: $\\frac00$ ใช้กฎได้",
+        "$\\lim\\frac{3\\cos3x}{1} = 3$"
+      ],
+      "answer": "$3$",
+      "verify": {
+        "kind": "limit",
+        "f": "sin(3x)/x",
+        "at": "0",
+        "answer": "3"
+      }
+    },
+    {
+      "title": "ใช้ซ้ำ",
+      "problem": "หา $\\lim_{x\\to0}\\frac{1 - \\cos x}{x^2}$",
+      "steps": [
+        "$\\frac00$: ได้ $\\frac{\\sin x}{2x}$",
+        "ยัง $\\frac00$: ได้ $\\frac{\\cos x}{2}$"
+      ],
+      "answer": "$\\frac12$",
+      "verify": {
+        "kind": "limit",
+        "f": "(1 - cos(x))/x^2",
+        "at": "0",
+        "answer": "1/2"
+      }
+    },
+    {
+      "title": "รูป 1^∞",
+      "problem": "หา $\\lim_{x\\to\\infty}\\left(1 + \\frac2x\\right)^{x}$",
+      "steps": [
+        "$\\ln y = x\\ln(1 + 2/x) = \\frac{\\ln(1+2/x)}{1/x}$ เป็นรูป $\\frac00$",
+        "ใช้กฎได้ $\\ln y \\to 2$"
+      ],
+      "answer": "$e^2$",
+      "verify": {
+        "kind": "limit",
+        "f": "(1 + 2/x)^x",
+        "at": "oo",
+        "answer": "e^2"
+      }
+    },
+    {
+      "title": "ใช้กฎไม่ได้",
+      "problem": "หา $\\lim_{x\\to1}\\frac{x^2 + 1}{x + 2}$",
+      "steps": [
+        "แทนค่าได้ $\\frac23$ ไม่ใช่รูปแบบไม่กำหนด",
+        "ถ้าใช้กฎผิดจะได้ $\\frac{2x}{1}\\to 2$ ซึ่งผิด"
+      ],
+      "answer": "$\\frac23$",
+      "verify": {
+        "kind": "limit",
+        "f": "(x^2+1)/(x+2)",
+        "at": "1",
+        "answer": "2/3"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "ใช้กฎผลหาร $\\left(\\frac fg\\right)'$",
+      "right": "หาอนุพันธ์เศษและส่วนแยกกัน: $\\frac{f'}{g'}$"
+    },
+    {
+      "wrong": "ใช้กฎทุกครั้งที่เห็นเศษส่วน",
+      "right": "ต้องเป็น $0/0$ หรือ $\\infty/\\infty$ เท่านั้น"
+    },
+    {
+      "wrong": "$1^\\infty = 1$",
+      "right": "เป็นรูปแบบไม่กำหนด ค่าอาจเป็นจำนวนใดก็ได้ เช่น $e^2$"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "function_plot",
+      "expressions": [
+        "sin(3*x)/x",
+        "3"
+      ],
+      "domain": [
+        -3,
+        3
+      ]
+    }
+  ],
+  "summary": [
+    "ตรวจรูปแบบก่อนเสมอ",
+    "$\\lim f/g = \\lim f'/g'$ ภายใต้เงื่อนไข",
+    "รูปอื่นแปลงเป็นเศษส่วนหรือใส่ $\\ln$",
+    "พีชคณิตอาจง่ายกว่า"
+  ],
+  "review": [
+    {
+      "q": "$\\lim_{x\\to0^+}x\\ln x$?",
+      "a": "$0$"
+    },
+    {
+      "q": "$\\lim_{x\\to\\infty}\\frac{x^3}{e^x}$?",
+      "a": "$0$"
+    },
+    {
+      "q": "ทำไมต้องมีเงื่อนไข $g'(x)\\ne0$?",
+      "a": "เพื่อให้ $f'/g'$ นิยามได้ใกล้ $a$ ตามทฤษฎีบทค่าเฉลี่ยของโคชี"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      407,
+      415
+    ],
+    "pdfIndex": 425,
+    "pdfPage": 426,
+    "verified": true,
+    "titleInBook": "Indeterminate Forms and L’Hôpital’s Rule"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 3,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

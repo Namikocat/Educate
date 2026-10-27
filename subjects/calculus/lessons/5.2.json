@@ -1,0 +1,187 @@
+{
+  "id": "calculus.5.2",
+  "section": "5.2",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "สัญกรณ์ซิกมาและลิมิตของผลรวมจำกัด",
+  "titleEn": "Sigma Notation and Limits of Finite Sums",
+  "objectives": [
+    {
+      "id": "5.2.sigma",
+      "text": "อ่านและเขียนผลรวมด้วยสัญกรณ์ซิกมา (sigma notation)"
+    },
+    {
+      "id": "5.2.sum_laws",
+      "text": "ใช้กฎของผลรวม (sum laws): ผลบวก ผลต่าง การคูณค่าคงที่"
+    },
+    {
+      "id": "5.2.formulas",
+      "text": "ใช้สูตร $\\sum k$, $\\sum k^2$, $\\sum k^3$ หาค่าผลรวมจำกัด"
+    },
+    {
+      "id": "5.2.limit_sums",
+      "text": "หาลิมิตของผลรวมรีมันน์เมื่อ $n \\to \\infty$"
+    },
+    {
+      "id": "5.2.sum_to_integral",
+      "text": "ระบุอินทิกรัลจำกัดเขตที่สอดคล้องกับลิมิตของผลรวม"
+    }
+  ],
+  "prerequisites": [
+    "5.1"
+  ],
+  "levels": {
+    "beginner": "สัญกรณ์ซิกมา $\\sum$ เป็นตัวย่อของ \"บวกกันทั้งหมด\" เช่น $\\sum_{k=1}^{4} k^2$ หมายถึง $1 + 4 + 9 + 16$ ตัวเลขใต้ $\\sum$ บอกว่าเริ่มที่ $k$ เท่าไร ตัวเลขด้านบนบอกว่าหยุดที่เท่าไร และนิพจน์ข้างหลังบอกว่าแต่ละพจน์คืออะไร เมื่อจำนวนพจน์มาก เราไม่บวกทีละตัว แต่ใช้สูตรสำเร็จ เช่น $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$",
+    "standard": "กฎของผลรวม: $\\sum (a_k \\pm b_k) = \\sum a_k \\pm \\sum b_k$, $\\sum c\\,a_k = c\\sum a_k$ และ $\\sum_{k=1}^n c = cn$ สูตรมาตรฐาน: $\\sum_{k=1}^n k = \\frac{n(n+1)}{2}$, $\\sum_{k=1}^n k^2 = \\frac{n(n+1)(2n+1)}{6}$, $\\sum_{k=1}^n k^3 = \\left(\\frac{n(n+1)}{2}\\right)^2$ ผลรวมรีมันน์แบบจุดปลายขวาของ $f$ บน $[a,b]$ คือ $\\sum_{k=1}^n f\\left(a + \\frac{(b-a)k}{n}\\right)\\frac{b-a}{n}$ เมื่อใช้สูตรผลรวมจะได้นิพจน์ของ $n$ แล้วหาลิมิตเมื่อ $n\\to\\infty$ ได้พื้นที่แม่นยำ",
+    "advanced": "สูตรผลรวมพิสูจน์ได้ด้วยอุปนัยเชิงคณิตศาสตร์ (mathematical induction) หรือผลรวมยุบตัว (telescoping) เช่น $\\sum_{k=1}^n [(k+1)^2 - k^2] = (n+1)^2 - 1$ ให้ $\\sum (2k+1) = n^2 + 2n$ จึงได้ $\\sum k$ การแปลงลิมิตของผลรวมเป็นอินทิกรัลต้องระบุสามสิ่ง: ช่วง $[a,b]$, $\\Delta x$ และ $x_k$ ซึ่งการเขียนเดียวกันอาจแทนอินทิกรัลได้หลายแบบ เช่น $\\lim \\sum (1 + \\frac{k}{n})^2\\frac1n$ คือ $\\int_1^2 x^2dx$ หรือ $\\int_0^1 (1+x)^2dx$ ซึ่งมีค่าเท่ากัน"
+  },
+  "definitions": [
+    {
+      "term": "สัญกรณ์ซิกมา",
+      "termEn": "Sigma notation",
+      "body": "$\\sum_{k=m}^{n} a_k = a_m + a_{m+1} + \\dots + a_n$ โดย $k$ คือดัชนีของผลรวม (index of summation)"
+    },
+    {
+      "term": "ผลรวมรีมันน์",
+      "termEn": "Riemann sum",
+      "body": "$\\sum_{k=1}^{n} f(c_k)\\Delta x_k$ สำหรับการแบ่งช่วงใด ๆ และจุดตัวแทน $c_k$"
+    },
+    {
+      "term": "ผลรวมยุบตัว",
+      "termEn": "Telescoping sum",
+      "body": "ผลรวมที่พจน์กลางหักล้างกัน เช่น $\\sum_{k=1}^n (b_{k+1} - b_k) = b_{n+1} - b_1$"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "กฎของผลรวม (Algebra rules for finite sums)",
+      "statement": "$\\sum (a_k + b_k) = \\sum a_k + \\sum b_k$, $\\sum c\\,a_k = c\\sum a_k$, $\\sum_{k=1}^{n} c = n c$"
+    },
+    {
+      "name": "สูตรผลรวมกำลัง",
+      "statement": "$\\sum_{k=1}^n k = \\frac{n(n+1)}{2}$, $\\sum_{k=1}^n k^2 = \\frac{n(n+1)(2n+1)}{6}$, $\\sum_{k=1}^n k^3 = \\left(\\frac{n(n+1)}{2}\\right)^2$"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\sum_{k=1}^n k = \\frac{n(n+1)}{2}",
+      "note": "ผลรวมจำนวนนับ"
+    },
+    {
+      "tex": "\\sum_{k=1}^n k^2 = \\frac{n(n+1)(2n+1)}{6}",
+      "note": "ผลรวมกำลังสอง"
+    },
+    {
+      "tex": "\\sum_{k=1}^n k^3 = \\left(\\frac{n(n+1)}{2}\\right)^2",
+      "note": "ผลรวมกำลังสาม"
+    },
+    {
+      "tex": "\\lim_{n\\to\\infty}\\sum_{k=1}^n f\\!\\left(a + k\\tfrac{b-a}{n}\\right)\\tfrac{b-a}{n} = \\int_a^b f(x)\\,dx",
+      "note": "ลิมิตของผลรวมรีมันน์ (สำหรับ $f$ ต่อเนื่อง)"
+    }
+  ],
+  "examples": [
+    {
+      "title": "ใช้กฎของผลรวม",
+      "problem": "หา $\\sum_{k=1}^{10} (3k^2 - 2k + 1)$",
+      "steps": [
+        "แยก: $3\\sum k^2 - 2\\sum k + \\sum 1$",
+        "$\\sum_{k=1}^{10} k^2 = 385$, $\\sum k = 55$, $\\sum 1 = 10$",
+        "$3(385) - 2(55) + 10 = 1155 - 110 + 10$"
+      ],
+      "answer": "$1055$",
+      "verify": {
+        "kind": "value",
+        "expr": "3*385 - 2*55 + 10",
+        "answer": "1055"
+      }
+    },
+    {
+      "title": "ลิมิตของผลรวมรีมันน์",
+      "problem": "หาพื้นที่ใต้ $y = x^2$ บน $[0,1]$ ด้วยลิมิตของ $R_n$",
+      "steps": [
+        "$\\Delta x = \\frac1n$, $x_k = \\frac kn$",
+        "$R_n = \\sum_{k=1}^n \\frac{k^2}{n^2}\\cdot\\frac1n = \\frac{1}{n^3}\\cdot\\frac{n(n+1)(2n+1)}{6}$",
+        "$= \\frac{2n^2 + 3n + 1}{6n^2} \\to \\frac{2}{6}$ เมื่อ $n\\to\\infty$"
+      ],
+      "answer": "$\\frac13$",
+      "verify": {
+        "kind": "definite",
+        "f": "x^2",
+        "a": "0",
+        "b": "1",
+        "answer": "1/3"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "$\\sum_{k=1}^n c = c$",
+      "right": "$\\sum_{k=1}^n c = nc$ เพราะบวก $c$ ทั้งหมด $n$ ครั้ง"
+    },
+    {
+      "wrong": "$\\sum a_k b_k = \\left(\\sum a_k\\right)\\left(\\sum b_k\\right)$",
+      "right": "ไม่มีกฎการคูณสำหรับผลรวม ต้องขยายก่อน"
+    },
+    {
+      "wrong": "ใช้สูตร $\\sum_{k=1}^n$ กับผลรวมที่เริ่มที่ $k = m$ โดยตรง",
+      "right": "ใช้ $\\sum_{k=m}^n = \\sum_{k=1}^n - \\sum_{k=1}^{m-1}$"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "riemann",
+      "f": "x^2",
+      "a": 0,
+      "b": 1,
+      "n": 10,
+      "method": "right"
+    }
+  ],
+  "summary": [
+    "$\\sum$ ย่อการบวกหลายพจน์",
+    "กฎของผลรวมใช้กับบวก ลบ และคูณค่าคงที่เท่านั้น",
+    "สูตร $\\sum k, \\sum k^2, \\sum k^3$ ทำให้เขียน $R_n$ เป็นนิพจน์ของ $n$",
+    "ลิมิตของ $R_n$ คืออินทิกรัลจำกัดเขต"
+  ],
+  "review": [
+    {
+      "q": "$\\sum_{k=1}^{20} k$ เท่ากับเท่าไร?",
+      "a": "$210$"
+    },
+    {
+      "q": "$\\lim_{n\\to\\infty} \\sum_{k=1}^n \\frac{3}{n}\\left(\\frac{3k}{n}\\right)$ คืออินทิกรัลใด?",
+      "a": "$\\int_0^3 x\\,dx = \\frac92$"
+    },
+    {
+      "q": "ทำไม $\\sum_{k=1}^{n}(k+1)^2 - k^2$ จึงคำนวณง่าย?",
+      "a": "เป็นผลรวมยุบตัว เหลือ $(n+1)^2 - 1$"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      258,
+      264
+    ],
+    "pdfIndex": 276,
+    "pdfPage": 277,
+    "verified": true,
+    "titleInBook": "Sigma Notation and Limits of Finite Sums"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

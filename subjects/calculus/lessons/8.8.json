@@ -1,0 +1,242 @@
+{
+  "id": "calculus.8.8",
+  "section": "8.8",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "อินทิกรัลไม่ตรงแบบ",
+  "titleEn": "Improper Integrals",
+  "objectives": [
+    {
+      "id": "8.8.infinite_interval",
+      "text": "หาค่าอินทิกรัลบนช่วงไม่จำกัด (Type I) ด้วยลิมิต"
+    },
+    {
+      "id": "8.8.unbounded_integrand",
+      "text": "หาค่าอินทิกรัลที่ตัวถูกอินทิเกรตไม่มีขอบเขต (Type II)"
+    },
+    {
+      "id": "8.8.convergence",
+      "text": "ตัดสินการลู่เข้า/ลู่ออก (convergence/divergence)"
+    },
+    {
+      "id": "8.8.split",
+      "text": "แยกอินทิกรัลที่จุดเอกฐานภายในหรือบน $(-\\infty,\\infty)$"
+    },
+    {
+      "id": "8.8.comparison",
+      "text": "ใช้การทดสอบเปรียบเทียบ (Direct / Limit Comparison Test)"
+    },
+    {
+      "id": "8.8.incorrect_cancellation",
+      "text": "หลีกเลี่ยงการหักล้างผิด ๆ ข้ามบริเวณที่ลู่ออก และแยกจากค่าหลัก (principal value)"
+    }
+  ],
+  "prerequisites": [
+    "5.4",
+    "7.5",
+    "8.2"
+  ],
+  "levels": {
+    "beginner": "อินทิกรัลไม่ตรงแบบคืออินทิกรัลที่ \"ยาวไม่สิ้นสุด\" (ขอบเขตเป็น $\\infty$) หรือ \"สูงไม่สิ้นสุด\" (ฟังก์ชันพุ่งขึ้นที่บางจุด) เราไม่แทนค่า $\\infty$ ตรง ๆ แต่คำนวณบนช่วงจำกัดก่อนแล้วหาลิมิต ถ้าลิมิตเป็นจำนวนจริง พื้นที่นั้นจำกัด (ลู่เข้า) แม้บริเวณจะยาวไม่สิ้นสุด",
+    "standard": "Type I: $\\int_a^\\infty f = \\lim_{b\\to\\infty}\\int_a^b f$; $\\int_{-\\infty}^{\\infty} f = \\int_{-\\infty}^c f + \\int_c^\\infty f$ ต้องลู่เข้าทั้งสองส่วน Type II: ถ้า $f$ ไม่มีขอบเขตที่ $a$, $\\int_a^b f = \\lim_{\\epsilon\\to0^+}\\int_{a+\\epsilon}^b f$; ถ้าไม่มีขอบเขตที่ $c$ ภายใน $(a,b)$ ต้องแยก $\\int_a^c + \\int_c^b$ p-test: $\\int_1^\\infty\\frac{dx}{x^p}$ ลู่เข้าเมื่อ $p > 1$ และ $\\int_0^1\\frac{dx}{x^p}$ ลู่เข้าเมื่อ $p < 1$ การทดสอบเปรียบเทียบ: ถ้า $0\\le f\\le g$ และ $\\int g$ ลู่เข้า แล้ว $\\int f$ ลู่เข้า; Limit Comparison: ถ้า $\\lim f/g = L$ โดย $0 < L < \\infty$ ทั้งสองลู่เข้าหรือลู่ออกพร้อมกัน",
+    "advanced": "ค่าหลักของโคชี (Cauchy principal value) $\\lim_{b\\to\\infty}\\int_{-b}^b f$ อาจมีค่าแม้อินทิกรัลลู่ออก เช่น $\\int_{-\\infty}^{\\infty}x\\,dx$ มีค่าหลัก $0$ แต่ลู่ออก เพราะนิยามต้องให้ขอบเขตทั้งสองไปอิสระ การหักล้างข้ามจุดเอกฐานเป็นข้อผิดพลาดร้ายแรง: $\\int_{-1}^1\\frac{dx}{x^2}$ ถ้าแทนค่าตรง ๆ ได้ $-2$ แต่จริง ๆ ลู่ออกสู่ $\\infty$ อินทิกรัลที่ลู่เข้าแบบมีเงื่อนไข เช่น $\\int_1^\\infty\\frac{\\sin x}{x}dx$ ลู่เข้าแต่ $\\int_1^\\infty\\left|\\frac{\\sin x}{x}\\right|dx$ ลู่ออก"
+  },
+  "definitions": [
+    {
+      "term": "อินทิกรัลไม่ตรงแบบชนิดที่ 1",
+      "termEn": "Type I improper integral",
+      "body": "ขอบเขตอินทิเกรตเป็นอนันต์"
+    },
+    {
+      "term": "อินทิกรัลไม่ตรงแบบชนิดที่ 2",
+      "termEn": "Type II improper integral",
+      "body": "ตัวถูกอินทิเกรตไม่มีขอบเขตที่จุดในช่วงปิด"
+    },
+    {
+      "term": "ลู่เข้า / ลู่ออก",
+      "termEn": "Converge / diverge",
+      "body": "ลู่เข้าถ้าลิมิตที่นิยามมีค่าเป็นจำนวนจริง มิฉะนั้นลู่ออก"
+    },
+    {
+      "term": "ค่าหลัก",
+      "termEn": "Principal value",
+      "body": "$\\lim_{b\\to\\infty}\\int_{-b}^b f$ — ไม่ใช่นิยามของการลู่เข้า"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "p-test",
+      "statement": "$\\int_1^\\infty x^{-p}dx$ ลู่เข้า $\\iff p > 1$; $\\int_0^1 x^{-p}dx$ ลู่เข้า $\\iff p < 1$"
+    },
+    {
+      "name": "Direct Comparison Test",
+      "statement": "ถ้า $0 \\le f(x) \\le g(x)$ บน $[a,\\infty)$: $\\int g$ ลู่เข้า ⇒ $\\int f$ ลู่เข้า; $\\int f$ ลู่ออก ⇒ $\\int g$ ลู่ออก",
+      "conditions": "f, g ต่อเนื่องและไม่ติดลบ"
+    },
+    {
+      "name": "Limit Comparison Test",
+      "statement": "ถ้า $f, g > 0$ และ $\\lim_{x\\to\\infty}\\frac{f}{g} = L$, $0 < L < \\infty$ แล้ว $\\int_a^\\infty f$ และ $\\int_a^\\infty g$ ลู่เข้าหรือลู่ออกพร้อมกัน"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\int_a^\\infty f(x)dx = \\lim_{b\\to\\infty}\\int_a^b f(x)dx",
+      "note": ""
+    },
+    {
+      "tex": "\\int_a^b f(x)dx = \\lim_{\\epsilon\\to0^+}\\int_{a+\\epsilon}^b f(x)dx",
+      "note": "เมื่อ $f$ ไม่มีขอบเขตที่ $a$"
+    },
+    {
+      "tex": "\\int_1^\\infty\\frac{dx}{x^p} = \\frac{1}{p-1},\\ p > 1",
+      "note": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "Type I",
+      "problem": "หา $\\int_1^\\infty\\frac{dx}{x^2}$",
+      "steps": [
+        "$\\int_1^b x^{-2}dx = 1 - \\frac1b$",
+        "$\\lim_{b\\to\\infty}\\left(1 - \\frac1b\\right) = 1$"
+      ],
+      "answer": "$1$ (ลู่เข้า)",
+      "verify": {
+        "kind": "improper",
+        "f": "1/x^2",
+        "a": "1",
+        "b": "oo",
+        "answer": "1"
+      }
+    },
+    {
+      "title": "ลู่ออก",
+      "problem": "หา $\\int_1^\\infty\\frac{dx}{x}$",
+      "steps": [
+        "$\\int_1^b\\frac{dx}{x} = \\ln b \\to \\infty$"
+      ],
+      "answer": "ลู่ออก",
+      "verify": {
+        "kind": "improper",
+        "f": "1/x",
+        "a": "1",
+        "b": "oo",
+        "answer": "diverges"
+      }
+    },
+    {
+      "title": "สองข้าง",
+      "problem": "หา $\\int_{-\\infty}^\\infty\\frac{dx}{1 + x^2}$",
+      "steps": [
+        "แยกที่ $0$: แต่ละส่วนเท่ากับ $\\frac\\pi2$"
+      ],
+      "answer": "$\\pi$",
+      "verify": {
+        "kind": "improper",
+        "f": "1/(1+x^2)",
+        "a": "-oo",
+        "b": "oo",
+        "answer": "pi"
+      }
+    },
+    {
+      "title": "จุดเอกฐานภายใน",
+      "problem": "หา $\\int_{-1}^{2}\\frac{dx}{x^2}$",
+      "steps": [
+        "$\\frac{1}{x^2}$ ไม่มีขอบเขตที่ $0$ ต้องแยก",
+        "$\\int_0^2\\frac{dx}{x^2} = \\lim_{\\epsilon\\to0^+}\\left(\\frac1\\epsilon - \\frac12\\right) = \\infty$"
+      ],
+      "answer": "ลู่ออก (การแทนค่าตรงที่ได้ $-\\frac32$ ผิด)",
+      "verify": {
+        "kind": "improper",
+        "f": "1/x^2",
+        "a": "-1",
+        "b": "2",
+        "answer": "diverges"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "แทน $\\infty$ ลงในปฏิยานุพันธ์โดยตรง",
+      "right": "ต้องเขียนเป็นลิมิตแล้วหาลิมิต"
+    },
+    {
+      "wrong": "ไม่สังเกตจุดเอกฐานภายในช่วง",
+      "right": "ตรวจตัวส่วนเป็นศูนย์ หรือ $\\ln$ ของศูนย์ ภายในช่วงทุกครั้ง"
+    },
+    {
+      "wrong": "$\\int_{-\\infty}^\\infty x\\,dx = 0$ เพราะเป็นฟังก์ชันคี่",
+      "right": "ลู่ออก เพราะแต่ละส่วนลู่ออก ค่า $0$ คือค่าหลักเท่านั้น"
+    },
+    {
+      "wrong": "ถ้า $f(x)\\to0$ เมื่อ $x\\to\\infty$ แล้วอินทิกรัลลู่เข้า",
+      "right": "ไม่จำเป็น เช่น $\\frac1x\\to0$ แต่ $\\int_1^\\infty\\frac{dx}{x}$ ลู่ออก"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "improper",
+      "f": "1/x^2",
+      "a": 1,
+      "b": 12
+    }
+  ],
+  "summary": [
+    "นิยามด้วยลิมิตเสมอ",
+    "แยกที่จุดเอกฐานและที่ $\\pm\\infty$",
+    "p-test เป็นเกณฑ์มาตรฐาน",
+    "เปรียบเทียบเมื่อหาปฏิยานุพันธ์ไม่ได้",
+    "ค่าหลักไม่ใช่การลู่เข้า"
+  ],
+  "review": [
+    {
+      "q": "$\\int_0^1\\frac{dx}{\\sqrt x}$?",
+      "a": "$2$ (ลู่เข้า, $p = \\frac12 < 1$)"
+    },
+    {
+      "q": "$\\int_0^\\infty e^{-3x}dx$?",
+      "a": "$\\frac13$"
+    },
+    {
+      "q": "$\\int_1^\\infty\\frac{dx}{x^3 + 5}$ ลู่เข้าหรือไม่?",
+      "a": "ลู่เข้า โดยเปรียบเทียบกับ $\\frac{1}{x^3}$"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      494,
+      504
+    ],
+    "pdfIndex": 512,
+    "pdfPage": 513,
+    "verified": true,
+    "titleInBook": "Improper Integrals"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 3,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

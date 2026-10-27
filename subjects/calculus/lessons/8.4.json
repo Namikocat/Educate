@@ -1,0 +1,172 @@
+{
+  "id": "calculus.8.4",
+  "section": "8.4",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "การแทนค่าด้วยฟังก์ชันตรีโกณมิติ",
+  "titleEn": "Trigonometric Substitutions",
+  "objectives": [
+    {
+      "id": "8.4.trig_sub",
+      "text": "เลือกการแทนค่าตรีโกณตามรูป $\\sqrt{a^2 - x^2}$, $\\sqrt{a^2 + x^2}$, $\\sqrt{x^2 - a^2}$"
+    },
+    {
+      "id": "8.4.triangle",
+      "text": "ใช้สามเหลี่ยมอ้างอิง (reference triangle) แปลงกลับเป็น $x$"
+    },
+    {
+      "id": "8.4.domain",
+      "text": "เลือกช่วงของ $\\theta$ ให้ฟังก์ชันผกผันได้และเครื่องหมายราก ถูกต้อง"
+    },
+    {
+      "id": "8.4.back_sub",
+      "text": "แทนกลับอย่างถูกต้องรวมถึงขอบเขตในอินทิกรัลจำกัดเขต"
+    }
+  ],
+  "prerequisites": [
+    "8.1",
+    "8.3",
+    "7.1"
+  ],
+  "levels": {
+    "beginner": "รากที่สองแบบ $\\sqrt{a^2 - x^2}$ ดูเหมือนด้านของสามเหลี่ยมมุมฉาก ถ้าให้ $x = a\\sin\\theta$ รากจะกลายเป็น $a\\cos\\theta$ พอดี ทำให้รากหายไป เหลืออินทิกรัลตรีโกณซึ่งเราทำได้แล้วจาก 8.3 สุดท้ายวาดสามเหลี่ยมเพื่อแปลงคำตอบกลับเป็น $x$",
+    "standard": "สามรูปแบบ: (1) $\\sqrt{a^2 - x^2}$: $x = a\\sin\\theta$, $-\\frac\\pi2\\le\\theta\\le\\frac\\pi2$ ได้ $a\\cos\\theta$ (2) $\\sqrt{a^2 + x^2}$: $x = a\\tan\\theta$, $-\\frac\\pi2<\\theta<\\frac\\pi2$ ได้ $a\\sec\\theta$ (3) $\\sqrt{x^2 - a^2}$: $x = a\\sec\\theta$, $0\\le\\theta<\\frac\\pi2$ (เมื่อ $x \\ge a$) ได้ $a\\tan\\theta$ ช่วงของ $\\theta$ เลือกให้การแทนค่าผกผันได้และฟังก์ชันใต้รากไม่ติดลบ จึงไม่ต้องใส่ค่าสัมบูรณ์ แทนกลับโดยวาดสามเหลี่ยม: เช่น $\\sin\\theta = \\frac xa$ ด้านประชิด $\\sqrt{a^2 - x^2}$",
+    "advanced": "ทางเลือกคือการแทนค่าด้วยไฮเพอร์โบลิก เช่น $x = a\\sinh t$ สำหรับ $\\sqrt{a^2 + x^2}$ ซึ่งให้ $\\sinh^{-1}\\frac xa = \\ln\\left(\\frac xa + \\sqrt{1 + \\frac{x^2}{a^2}}\\right)$ ต่างจากคำตอบตรีโกณด้วยค่าคงที่ $\\ln a$ สำหรับ $x \\le -a$ ในรูปแบบ (3) ต้องเลือก $\\frac\\pi2<\\theta\\le\\pi$ ซึ่ง $\\tan\\theta \\le 0$ ทำให้ต้องระวังเครื่องหมาย ในอินทิกรัลจำกัดเขตควรเปลี่ยนขอบเขตเป็น $\\theta$ เพื่อหลีกเลี่ยงการแทนกลับ"
+  },
+  "definitions": [
+    {
+      "term": "การแทนค่าด้วยตรีโกณ",
+      "termEn": "Trigonometric substitution",
+      "body": "การแทน $x$ ด้วยฟังก์ชันตรีโกณของ $\\theta$ เพื่อกำจัดรากที่สองของรูปกำลังสอง"
+    },
+    {
+      "term": "สามเหลี่ยมอ้างอิง",
+      "termEn": "Reference triangle",
+      "body": "สามเหลี่ยมมุมฉากที่สร้างจากความสัมพันธ์ของการแทนค่า ใช้อ่านค่าฟังก์ชันตรีโกณอื่นในรูป $x$"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "เงื่อนไขการผกผัน",
+      "statement": "การแทนค่า $x = g(\\theta)$ ต้องผกผันได้บนช่วงที่เลือก เพื่อให้แทนกลับ $\\theta = g^{-1}(x)$ ได้"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\sqrt{a^2 - x^2}:\\ x = a\\sin\\theta",
+      "note": "$1 - \\sin^2 = \\cos^2$"
+    },
+    {
+      "tex": "\\sqrt{a^2 + x^2}:\\ x = a\\tan\\theta",
+      "note": "$1 + \\tan^2 = \\sec^2$"
+    },
+    {
+      "tex": "\\sqrt{x^2 - a^2}:\\ x = a\\sec\\theta",
+      "note": "$\\sec^2 - 1 = \\tan^2$"
+    }
+  ],
+  "examples": [
+    {
+      "title": "รูป a² − x²",
+      "problem": "หา $\\int\\frac{x^2}{\\sqrt{9 - x^2}}dx$",
+      "steps": [
+        "$x = 3\\sin\\theta$, $dx = 3\\cos\\theta\\,d\\theta$, $\\sqrt{9 - x^2} = 3\\cos\\theta$",
+        "$\\int 9\\sin^2\\theta\\,d\\theta = \\frac92(\\theta - \\sin\\theta\\cos\\theta)$",
+        "แทนกลับ: $\\sin\\theta = \\frac x3$, $\\cos\\theta = \\frac{\\sqrt{9 - x^2}}{3}$"
+      ],
+      "answer": "$\\frac92\\sin^{-1}\\frac x3 - \\frac{x\\sqrt{9 - x^2}}{2} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "x^2/sqrt(9 - x^2)",
+        "answer": "(9/2) arcsin(x/3) - x sqrt(9-x^2)/2",
+        "domain": [
+          -2.5,
+          2.5
+        ]
+      }
+    },
+    {
+      "title": "รูป a² + x²",
+      "problem": "หา $\\int\\frac{dx}{(4 + x^2)^{3/2}}$",
+      "steps": [
+        "$x = 2\\tan\\theta$, $dx = 2\\sec^2\\theta\\,d\\theta$",
+        "$\\int\\frac{2\\sec^2\\theta}{8\\sec^3\\theta}d\\theta = \\frac14\\sin\\theta$",
+        "$\\sin\\theta = \\frac{x}{\\sqrt{4 + x^2}}$"
+      ],
+      "answer": "$\\frac{x}{4\\sqrt{4 + x^2}} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "1/(4+x^2)^(3/2)",
+        "answer": "x/(4 sqrt(4+x^2))"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "ใช้ $x = a\\sin\\theta$ กับ $\\sqrt{a^2 + x^2}$",
+      "right": "รูป $a^2 + x^2$ ใช้ $x = a\\tan\\theta$"
+    },
+    {
+      "wrong": "ตอบเป็น $\\theta$ ในอินทิกรัลไม่จำกัดเขต",
+      "right": "ต้องแทนกลับเป็น $x$ ด้วยสามเหลี่ยมอ้างอิง"
+    },
+    {
+      "wrong": "$\\sqrt{a^2\\cos^2\\theta} = a\\cos\\theta$ เสมอ",
+      "right": "จริงเพราะเลือก $\\theta\\in[-\\pi/2, \\pi/2]$ ที่ $\\cos\\theta\\ge0$ ต้องระบุช่วงนี้"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "area",
+      "f": "sqrt(9 - x^2)",
+      "a": -3,
+      "b": 3
+    }
+  ],
+  "summary": [
+    "$a^2 - x^2 \\to \\sin$, $a^2 + x^2 \\to \\tan$, $x^2 - a^2 \\to \\sec$",
+    "เลือกช่วงของ $\\theta$ ให้ผกผันได้",
+    "แทนกลับด้วยสามเหลี่ยม",
+    "ตรวจโดยหาอนุพันธ์"
+  ],
+  "review": [
+    {
+      "q": "$\\int\\frac{dx}{\\sqrt{x^2 + 1}}$?",
+      "a": "$\\ln\\left(x + \\sqrt{x^2+1}\\right) + C$"
+    },
+    {
+      "q": "$\\int_0^2\\sqrt{4 - x^2}dx$?",
+      "a": "$\\pi$ (หนึ่งในสี่วงกลมรัศมี 2)"
+    },
+    {
+      "q": "ถ้า $x = 5\\sec\\theta$ แล้ว $\\tan\\theta$ เป็นเท่าไรในรูป $x$?",
+      "a": "$\\frac{\\sqrt{x^2 - 25}}{5}$ (เมื่อ $x \\ge 5$)"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      466,
+      470
+    ],
+    "pdfIndex": 484,
+    "pdfPage": 485,
+    "verified": true,
+    "titleInBook": "Trigonometric Substitutions"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

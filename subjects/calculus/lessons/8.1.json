@@ -1,0 +1,204 @@
+{
+  "id": "calculus.8.1",
+  "section": "8.1",
+  "version": "1.0.0",
+  "status": "machine-validated",
+  "title": "การใช้สูตรอินทิกรัลพื้นฐาน",
+  "titleEn": "Using Basic Integration Formulas",
+  "objectives": [
+    {
+      "id": "8.1.basic_formulas",
+      "text": "จำและเลือกใช้ตารางสูตรอินทิกรัลพื้นฐาน"
+    },
+    {
+      "id": "8.1.algebraic_simplification",
+      "text": "จัดรูปพีชคณิต (แยกเศษส่วน หารยาว) ก่อนอินทิเกรต"
+    },
+    {
+      "id": "8.1.completing_square",
+      "text": "ทำกำลังสองสมบูรณ์เพื่อเข้ารูป $\\tan^{-1}$ หรือ $\\sin^{-1}$"
+    },
+    {
+      "id": "8.1.identities",
+      "text": "ใช้เอกลักษณ์ตรีโกณเปลี่ยนตัวถูกอินทิเกรต"
+    },
+    {
+      "id": "8.1.exp_log",
+      "text": "อินทิกรัลที่ให้ผลเป็นเอกซ์โพเนนเชียลและลอการิทึม"
+    },
+    {
+      "id": "8.1.trig",
+      "text": "อินทิกรัลตรีโกณพื้นฐาน"
+    }
+  ],
+  "prerequisites": [
+    "5.5",
+    "7.2",
+    "7.3"
+  ],
+  "levels": {
+    "beginner": "อินทิกรัลส่วนใหญ่ที่ดูยาก จริง ๆ แล้วเป็นสูตรพื้นฐานที่ \"แต่งตัว\" มา งานของเราคือจัดรูปให้เห็นสูตร เช่น แยกเศษส่วนเป็นหลายพจน์ ทำกำลังสองสมบูรณ์ หรือใช้เอกลักษณ์ตรีโกณ แล้วค่อยใช้ตารางสูตร",
+    "standard": "กลยุทธ์: (1) จัดรูปพีชคณิต: แยก $\\frac{a + b}{c} = \\frac ac + \\frac bc$, หารยาวเมื่อดีกรีเศษ ≥ ส่วน (2) ทำกำลังสองสมบูรณ์: $x^2 + 2px + q = (x+p)^2 + (q - p^2)$ แล้วใช้ $\\int\\frac{du}{u^2+a^2} = \\frac1a\\tan^{-1}\\frac ua$ หรือ $\\int\\frac{du}{\\sqrt{a^2-u^2}} = \\sin^{-1}\\frac ua$ (3) ใช้เอกลักษณ์: $\\tan^2 = \\sec^2 - 1$, $\\sin^2 = \\frac{1 - \\cos2x}{2}$ (4) แทนค่าเมื่อเห็นอนุพันธ์ของฟังก์ชันข้างใน (5) คูณด้วยรูปของ 1 เช่น $\\frac{\\sec x + \\tan x}{\\sec x + \\tan x}$ เพื่อหา $\\int\\sec x\\,dx$",
+    "advanced": "ไม่ใช่ทุกฟังก์ชันพื้นฐานมีปฏิยานุพันธ์เป็นฟังก์ชันพื้นฐาน (เช่น $e^{-x^2}$, $\\frac{\\sin x}{x}$) ทฤษฎีบทของลิอูวิลล์ (Liouville) อธิบายเงื่อนไขนี้ ดังนั้นการรู้จักรูปมาตรฐานจึงสำคัญ และการตรวจคำตอบด้วยการหาอนุพันธ์เป็นวิธีพิสูจน์ที่เชื่อถือได้เสมอ"
+  },
+  "definitions": [
+    {
+      "term": "การทำกำลังสองสมบูรณ์",
+      "termEn": "Completing the square",
+      "body": "$ax^2 + bx + c = a\\left(x + \\frac{b}{2a}\\right)^2 + c - \\frac{b^2}{4a}$"
+    },
+    {
+      "term": "การหารยาว",
+      "termEn": "Polynomial long division",
+      "body": "เขียน $\\frac{P}{Q} = S + \\frac{R}{Q}$ โดย $\\deg R < \\deg Q$"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "ตารางสูตรพื้นฐาน",
+      "statement": "ดูรายการสูตร — ทุกสูตรตรวจได้โดยการหาอนุพันธ์"
+    }
+  ],
+  "formulas": [
+    {
+      "tex": "\\int\\frac{du}{a^2 + u^2} = \\frac1a\\tan^{-1}\\frac ua + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int\\frac{du}{\\sqrt{a^2 - u^2}} = \\sin^{-1}\\frac ua + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int\\sec u\\,du = \\ln|\\sec u + \\tan u| + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int\\csc u\\,du = -\\ln|\\csc u + \\cot u| + C",
+      "note": ""
+    },
+    {
+      "tex": "\\int\\sec u\\tan u\\,du = \\sec u + C",
+      "note": ""
+    }
+  ],
+  "examples": [
+    {
+      "title": "กำลังสองสมบูรณ์",
+      "problem": "หา $\\int\\frac{dx}{x^2 + 4x + 13}$",
+      "steps": [
+        "$x^2 + 4x + 13 = (x+2)^2 + 9$",
+        "ให้ $u = x + 2$, $a = 3$"
+      ],
+      "answer": "$\\frac13\\tan^{-1}\\frac{x+2}{3} + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "1/(x^2+4x+13)",
+        "answer": "(1/3) arctan((x+2)/3)"
+      }
+    },
+    {
+      "title": "หารยาว",
+      "problem": "หา $\\int\\frac{x^2 + 1}{x + 1}dx$",
+      "steps": [
+        "$\\frac{x^2 + 1}{x+1} = x - 1 + \\frac{2}{x+1}$",
+        "อินทิเกรตทีละพจน์"
+      ],
+      "answer": "$\\frac{x^2}{2} - x + 2\\ln|x+1| + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "(x^2+1)/(x+1)",
+        "answer": "x^2/2 - x + 2 ln(x+1)"
+      }
+    },
+    {
+      "title": "เอกลักษณ์",
+      "problem": "หา $\\int(\\sec x + \\tan x)^2dx$",
+      "steps": [
+        "ขยาย: $\\sec^2 + 2\\sec\\tan + \\tan^2 = 2\\sec^2x + 2\\sec x\\tan x - 1$"
+      ],
+      "answer": "$2\\tan x + 2\\sec x - x + C$",
+      "verify": {
+        "kind": "antiderivative",
+        "f": "(sec(x)+tan(x))^2",
+        "answer": "2tan(x) + 2sec(x) - x"
+      }
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "$\\int\\frac{1}{x^2+4}dx = \\ln(x^2+4)$",
+      "right": "ตัวเศษไม่ใช่อนุพันธ์ของตัวส่วน ใช้ $\\frac12\\tan^{-1}\\frac x2$"
+    },
+    {
+      "wrong": "$\\int\\frac{x^2+1}{x+1}dx = \\frac{x^3/3 + x}{x^2/2 + x}$",
+      "right": "ไม่มีกฎผลหารสำหรับอินทิกรัล ต้องจัดรูปก่อน"
+    },
+    {
+      "wrong": "ข้ามการหารยาวเมื่อดีกรีเศษ ≥ ส่วน",
+      "right": "ต้องหารก่อนเสมอ"
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "function_plot",
+      "expressions": [
+        "1/(x^2+4*x+13)"
+      ],
+      "domain": [
+        -8,
+        4
+      ]
+    }
+  ],
+  "summary": [
+    "จัดรูปก่อนเลือกสูตร",
+    "กำลังสองสมบูรณ์ → $\\tan^{-1}$ / $\\sin^{-1}$",
+    "หารยาวเมื่อเศษส่วนไม่แท้",
+    "ตรวจด้วยการหาอนุพันธ์"
+  ],
+  "review": [
+    {
+      "q": "$\\int\\frac{dx}{\\sqrt{9 - x^2}}$?",
+      "a": "$\\sin^{-1}\\frac x3 + C$"
+    },
+    {
+      "q": "$\\int\\frac{e^x}{1 + e^x}dx$?",
+      "a": "$\\ln(1 + e^x) + C$"
+    },
+    {
+      "q": "$x^2 - 6x + 10$ ทำกำลังสองสมบูรณ์ได้?",
+      "a": "$(x-3)^2 + 1$"
+    }
+  ],
+  "source": {
+    "printedPages": [
+      447,
+      451
+    ],
+    "pdfIndex": 465,
+    "pdfPage": 466,
+    "verified": true,
+    "titleInBook": "Using Basic Integration Formulas"
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "examples": [
+      {
+        "example": 0,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 1,
+        "verified": true,
+        "method": "symbolic"
+      },
+      {
+        "example": 2,
+        "verified": true,
+        "method": "symbolic"
+      }
+    ],
+    "humanReview": "pending"
+  }
+}

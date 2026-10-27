@@ -1,0 +1,1135 @@
+{
+  "seedsPerDifficulty": 120,
+  "families": 129,
+  "uniqueInstances": 14047,
+  "generated": 45840,
+  "failures": [],
+  "timing": {
+    "meanMs": 31.3,
+    "p95Ms": 96.9,
+    "maxMs": 608.8
+  },
+  "sections": {
+    "5.1": {
+      "families": 6,
+      "unique": 1034
+    },
+    "5.2": {
+      "families": 6,
+      "unique": 1437
+    },
+    "5.3": {
+      "families": 6,
+      "unique": 1727
+    },
+    "5.4": {
+      "families": 6,
+      "unique": 625
+    },
+    "5.5": {
+      "families": 7,
+      "unique": 1381
+    },
+    "5.6": {
+      "families": 8,
+      "unique": 375
+    },
+    "6.1": {
+      "families": 7,
+      "unique": 262
+    },
+    "6.2": {
+      "families": 5,
+      "unique": 53
+    },
+    "6.3": {
+      "families": 6,
+      "unique": 150
+    },
+    "6.4": {
+      "families": 5,
+      "unique": 108
+    },
+    "7.1": {
+      "families": 6,
+      "unique": 956
+    },
+    "7.2": {
+      "families": 6,
+      "unique": 887
+    },
+    "7.3": {
+      "families": 7,
+      "unique": 1160
+    },
+    "7.5": {
+      "families": 8,
+      "unique": 779
+    },
+    "8.1": {
+      "families": 6,
+      "unique": 952
+    },
+    "8.2": {
+      "families": 7,
+      "unique": 337
+    },
+    "8.3": {
+      "families": 7,
+      "unique": 120
+    },
+    "8.4": {
+      "families": 7,
+      "unique": 160
+    },
+    "8.5": {
+      "families": 6,
+      "unique": 1271
+    },
+    "8.8": {
+      "families": 7,
+      "unique": 273
+    }
+  },
+  "perFamily": {
+    "calc.5.1.left_sum": {
+      "section": "5.1",
+      "generated": 360,
+      "unique": 287,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.1.right_sum": {
+      "section": "5.1",
+      "generated": 360,
+      "unique": 297,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.1.midpoint_sum": {
+      "section": "5.1",
+      "generated": 360,
+      "unique": 284,
+      "answerVerification": {
+        "symbolic": 359,
+        "numeric": 1
+      }
+    },
+    "calc.5.1.upper_sum": {
+      "section": "5.1",
+      "generated": 360,
+      "unique": 94,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.1.signed_midpoint": {
+      "section": "5.1",
+      "generated": 360,
+      "unique": 36,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.1.estimate_error": {
+      "section": "5.1",
+      "generated": 360,
+      "unique": 36,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.2.evaluate_sum": {
+      "section": "5.2",
+      "generated": 360,
+      "unique": 350,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.2.closed_form": {
+      "section": "5.2",
+      "generated": 360,
+      "unique": 172,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.2.sum_laws": {
+      "section": "5.2",
+      "generated": 360,
+      "unique": 360,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.2.riemann_limit": {
+      "section": "5.2",
+      "generated": 360,
+      "unique": 68,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.2.shifted_index": {
+      "section": "5.2",
+      "generated": 360,
+      "unique": 258,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.2.telescoping": {
+      "section": "5.2",
+      "generated": 360,
+      "unique": 229,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.3.geometric_semicircle": {
+      "section": "5.3",
+      "generated": 360,
+      "unique": 47,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.3.linearity": {
+      "section": "5.3",
+      "generated": 360,
+      "unique": 355,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.3.additivity": {
+      "section": "5.3",
+      "generated": 360,
+      "unique": 308,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.3.signed_linear": {
+      "section": "5.3",
+      "generated": 360,
+      "unique": 311,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.3.average_value": {
+      "section": "5.3",
+      "generated": 360,
+      "unique": 353,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.3.piecewise": {
+      "section": "5.3",
+      "generated": 360,
+      "unique": 353,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.4.ftc1_basic": {
+      "section": "5.4",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.4.ftc1_chain": {
+      "section": "5.4",
+      "generated": 360,
+      "unique": 73,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.4.ftc1_both_limits": {
+      "section": "5.4",
+      "generated": 360,
+      "unique": 75,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.4.ftc2_poly": {
+      "section": "5.4",
+      "generated": 360,
+      "unique": 355,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.4.ftc2_transcendental": {
+      "section": "5.4",
+      "generated": 360,
+      "unique": 30,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.4.total_area": {
+      "section": "5.4",
+      "generated": 360,
+      "unique": 72,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.5.linear_inner": {
+      "section": "5.5",
+      "generated": 360,
+      "unique": 335,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.5.power_chain": {
+      "section": "5.5",
+      "generated": 360,
+      "unique": 280,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.5.trig_power": {
+      "section": "5.5",
+      "generated": 360,
+      "unique": 36,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.5.exp_sub": {
+      "section": "5.5",
+      "generated": 360,
+      "unique": 84,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.5.log_sub": {
+      "section": "5.5",
+      "generated": 360,
+      "unique": 322,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.5.sqrt_sub": {
+      "section": "5.5",
+      "generated": 360,
+      "unique": 134,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.5.trig_inner": {
+      "section": "5.5",
+      "generated": 360,
+      "unique": 190,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.definite_sub_poly": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 142,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.definite_sub_trig": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 85,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.definite_sub_exp": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 24,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.area_parabola_line": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 58,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.area_two_parabolas": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 42,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.area_wrt_y": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 8,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.area_sign_change": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 12,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.5.6.area_sqrt_line": {
+      "section": "5.6",
+      "generated": 360,
+      "unique": 4,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.1.disk_power": {
+      "section": "6.1",
+      "generated": 360,
+      "unique": 27,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.1.disk_sphere_segment": {
+      "section": "6.1",
+      "generated": 360,
+      "unique": 70,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.1.washer_line_parabola": {
+      "section": "6.1",
+      "generated": 360,
+      "unique": 6,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.1.washer_about_line": {
+      "section": "6.1",
+      "generated": 360,
+      "unique": 6,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.1.cross_section_triangle": {
+      "section": "6.1",
+      "generated": 360,
+      "unique": 99,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.1.cross_section_parabola": {
+      "section": "6.1",
+      "generated": 360,
+      "unique": 27,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.1.disk_about_y": {
+      "section": "6.1",
+      "generated": 360,
+      "unique": 27,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.2.shell_poly": {
+      "section": "6.2",
+      "generated": 360,
+      "unique": 12,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.2.shell_between": {
+      "section": "6.2",
+      "generated": 360,
+      "unique": 4,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.2.shell_about_x": {
+      "section": "6.2",
+      "generated": 360,
+      "unique": 3,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.2.shell_vertical_line": {
+      "section": "6.2",
+      "generated": 360,
+      "unique": 18,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.2.shell_transcendental": {
+      "section": "6.2",
+      "generated": 360,
+      "unique": 16,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.3.arc_three_halves": {
+      "section": "6.3",
+      "generated": 360,
+      "unique": 9,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.3.arc_perfect_square": {
+      "section": "6.3",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.3.arc_log_cos": {
+      "section": "6.3",
+      "generated": 360,
+      "unique": 3,
+      "answerVerification": {
+        "symbolic": 120,
+        "numeric": 240
+      }
+    },
+    "calc.6.3.arc_line": {
+      "section": "6.3",
+      "generated": 120,
+      "unique": 108,
+      "answerVerification": {
+        "symbolic": 120
+      }
+    },
+    "calc.6.3.arc_x_of_y": {
+      "section": "6.3",
+      "generated": 360,
+      "unique": 5,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.3.arc_catenary": {
+      "section": "6.3",
+      "generated": 360,
+      "unique": 5,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.4.surface_cone": {
+      "section": "6.4",
+      "generated": 360,
+      "unique": 16,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.4.surface_sphere_zone": {
+      "section": "6.4",
+      "generated": 360,
+      "unique": 79,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.4.surface_sqrt": {
+      "section": "6.4",
+      "generated": 360,
+      "unique": 5,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.4.surface_cubic": {
+      "section": "6.4",
+      "generated": 360,
+      "unique": 6,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.6.4.surface_about_y": {
+      "section": "6.4",
+      "generated": 360,
+      "unique": 2,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.1.inverse_linear": {
+      "section": "7.1",
+      "generated": 120,
+      "unique": 88,
+      "answerVerification": {
+        "symbolic": 120
+      }
+    },
+    "calc.7.1.inverse_rational": {
+      "section": "7.1",
+      "generated": 360,
+      "unique": 339,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.1.inverse_power": {
+      "section": "7.1",
+      "generated": 360,
+      "unique": 119,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.1.inverse_derivative_poly": {
+      "section": "7.1",
+      "generated": 360,
+      "unique": 198,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.1.inverse_derivative_trans": {
+      "section": "7.1",
+      "generated": 360,
+      "unique": 27,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.1.one_to_one_interval": {
+      "section": "7.1",
+      "generated": 360,
+      "unique": 185,
+      "answerVerification": {
+        "exact": 360
+      }
+    },
+    "calc.7.2.ln_chain": {
+      "section": "7.2",
+      "generated": 360,
+      "unique": 207,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.2.log_differentiation": {
+      "section": "7.2",
+      "generated": 360,
+      "unique": 135,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.2.ln_integral": {
+      "section": "7.2",
+      "generated": 360,
+      "unique": 267,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.2.ln_definite": {
+      "section": "7.2",
+      "generated": 360,
+      "unique": 48,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.2.log_properties": {
+      "section": "7.2",
+      "generated": 240,
+      "unique": 190,
+      "answerVerification": {
+        "symbolic": 240
+      }
+    },
+    "calc.7.2.tan_integral": {
+      "section": "7.2",
+      "generated": 360,
+      "unique": 40,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.3.exp_derivative": {
+      "section": "7.3",
+      "generated": 360,
+      "unique": 178,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.3.exp_integral": {
+      "section": "7.3",
+      "generated": 360,
+      "unique": 285,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.3.general_base_derivative": {
+      "section": "7.3",
+      "generated": 360,
+      "unique": 107,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.3.general_base_integral": {
+      "section": "7.3",
+      "generated": 360,
+      "unique": 87,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.3.solve_exponential": {
+      "section": "7.3",
+      "generated": 360,
+      "unique": 323,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.3.variable_power": {
+      "section": "7.3",
+      "generated": 360,
+      "unique": 12,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.3.log_base_derivative": {
+      "section": "7.3",
+      "generated": 360,
+      "unique": 168,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.lh_polynomial": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 273,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.lh_trig": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 99,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.lh_exp": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 79,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.lh_infinity": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 21,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.lh_zero_times_inf": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 3,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.lh_one_to_inf": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 32,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.lh_not_applicable": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 184,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.7.5.conjugate_alternative": {
+      "section": "7.5",
+      "generated": 360,
+      "unique": 88,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.1.split_fraction": {
+      "section": "8.1",
+      "generated": 360,
+      "unique": 288,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.1.complete_square_arctan": {
+      "section": "8.1",
+      "generated": 360,
+      "unique": 178,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.1.arcsin_form": {
+      "section": "8.1",
+      "generated": 360,
+      "unique": 129,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.1.long_division": {
+      "section": "8.1",
+      "generated": 360,
+      "unique": 298,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.1.trig_square": {
+      "section": "8.1",
+      "generated": 360,
+      "unique": 5,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.1.exp_fraction": {
+      "section": "8.1",
+      "generated": 360,
+      "unique": 54,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.2.poly_exp": {
+      "section": "8.2",
+      "generated": 360,
+      "unique": 222,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.2.poly_trig": {
+      "section": "8.2",
+      "generated": 360,
+      "unique": 40,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.2.poly_log": {
+      "section": "8.2",
+      "generated": 360,
+      "unique": 12,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.2.single_function": {
+      "section": "8.2",
+      "generated": 360,
+      "unique": 15,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.2.repeated": {
+      "section": "8.2",
+      "generated": 360,
+      "unique": 15,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.2.cyclic": {
+      "section": "8.2",
+      "generated": 360,
+      "unique": 24,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.2.definite_parts": {
+      "section": "8.2",
+      "generated": 360,
+      "unique": 9,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.3.odd_sine": {
+      "section": "8.3",
+      "generated": 360,
+      "unique": 10,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.3.odd_cosine": {
+      "section": "8.3",
+      "generated": 360,
+      "unique": 8,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.3.even_powers": {
+      "section": "8.3",
+      "generated": 360,
+      "unique": 12,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.3.tan_sec_even": {
+      "section": "8.3",
+      "generated": 360,
+      "unique": 8,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.3.tan_odd_sec": {
+      "section": "8.3",
+      "generated": 360,
+      "unique": 12,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.3.product_to_sum": {
+      "section": "8.3",
+      "generated": 360,
+      "unique": 60,
+      "answerVerification": {
+        "symbolic": 237,
+        "numeric": 123
+      }
+    },
+    "calc.8.3.wallis_definite": {
+      "section": "8.3",
+      "generated": 360,
+      "unique": 10,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.4.over_x2_sqrt_minus": {
+      "section": "8.4",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.4.x2_over_sqrt_minus": {
+      "section": "8.4",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.4.over_plus_32": {
+      "section": "8.4",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.4.over_sqrt_plus": {
+      "section": "8.4",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.4.sqrt_minus_over_x": {
+      "section": "8.4",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "numeric": 360
+      }
+    },
+    "calc.8.4.over_x2_sqrt_plus": {
+      "section": "8.4",
+      "generated": 360,
+      "unique": 20,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.4.definite_circle": {
+      "section": "8.4",
+      "generated": 360,
+      "unique": 40,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.5.two_linear": {
+      "section": "8.5",
+      "generated": 360,
+      "unique": 344,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.5.three_linear": {
+      "section": "8.5",
+      "generated": 360,
+      "unique": 42,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.5.repeated_linear": {
+      "section": "8.5",
+      "generated": 360,
+      "unique": 345,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.5.irreducible_quadratic": {
+      "section": "8.5",
+      "generated": 360,
+      "unique": 171,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.5.improper_rational": {
+      "section": "8.5",
+      "generated": 360,
+      "unique": 333,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.5.definite": {
+      "section": "8.5",
+      "generated": 360,
+      "unique": 36,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.8.p_integral_infinity": {
+      "section": "8.8",
+      "generated": 360,
+      "unique": 30,
+      "answerVerification": {
+        "symbolic": 217,
+        "exact": 143
+      }
+    },
+    "calc.8.8.exp_decay": {
+      "section": "8.8",
+      "generated": 360,
+      "unique": 58,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.8.p_integral_zero": {
+      "section": "8.8",
+      "generated": 360,
+      "unique": 30,
+      "answerVerification": {
+        "symbolic": 201,
+        "exact": 159
+      }
+    },
+    "calc.8.8.arctan_both": {
+      "section": "8.8",
+      "generated": 360,
+      "unique": 40,
+      "answerVerification": {
+        "symbolic": 360
+      }
+    },
+    "calc.8.8.interior_singularity": {
+      "section": "8.8",
+      "generated": 360,
+      "unique": 12,
+      "answerVerification": {
+        "symbolic": 191,
+        "exact": 169
+      }
+    },
+    "calc.8.8.comparison": {
+      "section": "8.8",
+      "generated": 360,
+      "unique": 88,
+      "answerVerification": {
+        "exact": 360
+      }
+    },
+    "calc.8.8.log_improper": {
+      "section": "8.8",
+      "generated": 360,
+      "unique": 15,
+      "answerVerification": {
+        "exact": 112,
+        "symbolic": 248
+      }
+    }
+  }
+}

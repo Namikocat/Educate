@@ -1,0 +1,15 @@
+{
+  "id": "sample-linear-algebra",
+  "name": "ตัวอย่าง: พีชคณิตเชิงเส้นเบื้องต้น",
+  "nameEn": "Sample: Introductory Linear Algebra",
+  "version": "0.1.0",
+  "contentApi": 1,
+  "language": ["th", "en"],
+  "description": "แพ็กเกจตัวอย่างขนาดเล็กเพื่อแสดงว่าแพลตฟอร์มรองรับหลายวิชา มีเพียง 1 บทเรียนและ 2 ชุดโจทย์ ไม่ใช่รายวิชาที่สมบูรณ์",
+  "dependencies": [],
+  "curriculumVersion": "sample-0.1",
+  "requiredEngines": ["sympy-math-engine@1"],
+  "capabilities": ["lessons", "procedural-problems", "step-solutions"],
+  "completeness": "example",
+  "chapters": [{"id": "1", "title": "เวกเตอร์และเมทริกซ์", "titleEn": "Vectors and Matrices", "sections": ["la.1"]}]
+}

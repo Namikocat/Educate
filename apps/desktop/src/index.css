@@ -1,0 +1,32 @@
+@import "katex/dist/katex.min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 246 247 249;
+  --surface: 255 255 255;
+  --line: 226 229 234;
+  --ink: 24 28 36;
+  --muted: 100 108 122;
+  --accent: 37 99 235;
+  --good: 5 150 105;
+  --bad: 220 38 38;
+  --font-scale: 1;
+}
+.dark {
+  --bg: 17 20 26;
+  --surface: 26 30 38;
+  --line: 48 54 66;
+  --ink: 230 233 238;
+  --muted: 150 158 172;
+  --accent: 96 145 255;
+  --good: 52 199 140;
+  --bad: 248 113 113;
+}
+html { font-size: calc(16px * var(--font-scale)); }
+body { @apply bg-bg text-ink font-sans antialiased; }
+.katex { font-size: 1.08em; }
+.dark svg[role="img"] { filter: invert(0.92) hue-rotate(180deg); }
+.prose-lesson p { @apply leading-7; }
+::selection { background: rgb(var(--accent) / 0.25); }
