@@ -162,6 +162,10 @@ pub enum DbOp {
     Export,
     Import { data: String },
     Backup,
+    SaveConversation { request: Value, response: String },
+    ListConversations { limit: Option<i64> },
+    DeleteConversation { id: i64 },
+    ClearConversations,
 }
 
 fn check_section(s: &str) -> Result<(), String> {
@@ -172,7 +176,7 @@ fn check_section(s: &str) -> Result<(), String> {
 }
 
 const TABLES: &[&str] = &["profiles", "settings", "kv", "lesson_progress", "notes", "bookmarks", "problem_instances", "attempts", "exams",
-    "mastery_history", "study_sessions"];
+    "mastery_history", "study_sessions", "ai_conversations"];
 
 pub fn exec(db: &mut Db, op: DbOp) -> Result<Value, String> {
     let e = |x: rusqlite::Error| x.to_string();
@@ -326,6 +330,23 @@ pub fn exec(db: &mut Db, op: DbOp) -> Result<Value, String> {
             Value::Null
         }
         DbOp::Backup => Value::String(db.path.display().to_string()),
+        DbOp::SaveConversation { request, response } => {
+            let p = need()?;
+            let req = request.to_string();
+            if req.len() > 50_000 || response.len() > 60_000 { return Err("conversation too large".into()); }
+            c.execute("INSERT INTO ai_conversations(profile_id, created_at, request, response) VALUES(?1,?2,?3,?4)", params![p, now_ms(), req, response]).map_err(e)?;
+            json!(c.last_insert_rowid())
+        }
+        DbOp::ListConversations { limit } => {
+            let p = need()?;
+            let mut st = c.prepare("SELECT id, created_at, request, response FROM ai_conversations WHERE profile_id=?1 ORDER BY created_at DESC, id DESC LIMIT ?2").map_err(e)?;
+            let v = st.query_map(params![p, limit.unwrap_or(200).clamp(1, 1000)], |r| Ok(json!({"id": r.get::<_, i64>(0)?, "createdAt": r.get::<_, i64>(1)?,
+                "request": serde_json::from_str::<Value>(&r.get::<_, String>(2)?).unwrap_or(Value::Null), "response": r.get::<_, String>(3)?})))
+                .map_err(e)?.collect::<Result<Vec<_>, _>>().map_err(e)?;
+            Value::Array(v)
+        }
+        DbOp::DeleteConversation { id } => { let p = need()?; c.execute("DELETE FROM ai_conversations WHERE id=?1 AND profile_id=?2", params![id, p]).map_err(e)?; Value::Null }
+        DbOp::ClearConversations => { let p = need()?; c.execute("DELETE FROM ai_conversations WHERE profile_id=?1", [p]).map_err(e)?; Value::Null }
     })
 }
 
@@ -415,6 +436,21 @@ mod tests {
         let db2 = Db::open(&dir).unwrap();
         let n: i64 = db2.conn.query_row("SELECT count(*) FROM schema_migrations", [], |r| r.get(0)).unwrap();
         assert_eq!(n, 1);
+    }
+
+    #[test]
+    fn conversation_history() {
+        let mut db = Db::open(&tmp()).unwrap();
+        exec(&mut db, DbOp::CreateProfile { name: "T".into() }).unwrap();
+        let id = exec(&mut db, DbOp::SaveConversation { request: json!({"question": "q1"}), response: "a1".into() }).unwrap().as_i64().unwrap();
+        exec(&mut db, DbOp::SaveConversation { request: json!({"question": "q2"}), response: "a2".into() }).unwrap();
+        let l = exec(&mut db, DbOp::ListConversations { limit: None }).unwrap();
+        assert_eq!(l.as_array().unwrap().len(), 2);
+        assert_eq!(l[0]["request"]["question"], "q2");
+        exec(&mut db, DbOp::DeleteConversation { id }).unwrap();
+        assert_eq!(exec(&mut db, DbOp::ListConversations { limit: None }).unwrap().as_array().unwrap().len(), 1);
+        exec(&mut db, DbOp::ClearConversations).unwrap();
+        assert_eq!(exec(&mut db, DbOp::ListConversations { limit: None }).unwrap().as_array().unwrap().len(), 0);
     }
 
     #[test]

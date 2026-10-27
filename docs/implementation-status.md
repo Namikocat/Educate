@@ -18,6 +18,11 @@
 | Rust shell: SQLite migrations/backup/export/import/corruption handling, sidecar timeouts, Claude adapter, safe export | done | cargo test 6 passed |
 | Windows installers | **built**: `release/UniLearn Studio_1.0.0_x64-setup.exe` (30 MB), `…_x64_en-US.msi` (37 MB), `SHA256SUMS.txt` | NSIS installed silently outside the repo, app launched, bundled engine started, DB migrated, uninstall clean |
 
+## 2026-10-27 update
+* AI Tutor answers now render as safe Markdown (headings, lists, tables, code, quotes, inline/display math; no raw HTML). Claude is instructed to answer in Markdown.
+* Tutor history: saved locally in `ai_conversations` (toggle "บันทึกประวัติไว้ในเครื่อง", default on), searchable sidebar, delete one / clear all, "ถามต่อจากคำตอบนี้" follow-ups (previous answer sent as context). Included in data export.
+* Tests: Rust 7 passed, vitest 10 passed, tsc clean. Released as v1.0.1. Rendering checked in the browser with a seeded history entry; a live Claude call from the installed app is still untested.
+
 ## Not done / limitations (honest)
 * **No human academic review** of any lesson or step text — all `machine-validated`.
 * Installed-app UI was not clicked through (no desktop automation available); UI flows were tested in the browser against the same engine.

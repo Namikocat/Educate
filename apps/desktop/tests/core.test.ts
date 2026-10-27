@@ -66,3 +66,15 @@ describe("subject package registry", () => {
     expect(loadSubject({ ...calcManifest, id: "Bad Id" }, []).errors.length).toBeGreaterThan(0);
   });
 });
+
+import { parseBlocks } from "../src/components/Markdown";
+describe("tutor markdown parser", () => {
+  it("splits headings, lists, math, tables, code", () => {
+    const b = parseBlocks("## ขั้นตอน\n\n1. ให้ $u = x^2$\n2. ได้ **du**\n\n$$\int u\,du$$\n\n| a | b |\n|---|---|\n| 1 | 2 |\n\n```\ncode\n```\n- x\n- y");
+    expect(b.map((x) => x.t)).toEqual(["h", "ol", "math", "table", "code", "ul"]);
+  });
+  it("keeps raw HTML as plain text (no markup injection)", () => {
+    const b = parseBlocks("<script>alert(1)</script>");
+    expect(b).toEqual([{ t: "p", text: "<script>alert(1)</script>" }]);
+  });
+});

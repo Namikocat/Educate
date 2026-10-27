@@ -93,6 +93,7 @@ export interface TutorRequest {
   context: Record<string, unknown>;
   question: string;
 }
+export interface Conversation { id: number; createdAt: number; request: { mode: string; style?: string; question: string; section?: string; problem?: string }; response: string }
 export interface TutorResponse { ok: boolean; text?: string; error?: string; state?: ClaudeState; durationMs?: number }
 
 export interface Settings {
@@ -103,8 +104,9 @@ export interface Settings {
   leftPanel: boolean;
   rightPanel: boolean;
   focusMode: boolean;
+  saveTutorHistory: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-  theme: "system", fontScale: 1, level: "standard", aiEnabled: false, leftPanel: true, rightPanel: true, focusMode: false,
+  theme: "system", fontScale: 1, level: "standard", aiEnabled: false, leftPanel: true, rightPanel: true, focusMode: false, saveTutorHistory: true,
 };

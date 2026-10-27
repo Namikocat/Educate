@@ -28,7 +28,11 @@ export type DbOp =
   | { op: "list_sessions" }
   | { op: "export" }
   | { op: "import"; data: string }
-  | { op: "backup" };
+  | { op: "backup" }
+  | { op: "save_conversation"; request: Record<string, unknown>; response: string }
+  | { op: "list_conversations"; limit?: number }
+  | { op: "delete_conversation"; id: number }
+  | { op: "clear_conversations" };
 
 export interface Backend {
   kind: "tauri" | "dev";
@@ -110,6 +114,10 @@ function devBackend(): Backend {
           return JSON.stringify({ format: "unilearn-backup", version: 1, data: out }); }
         case "import": { const d = JSON.parse(op.data); if (d.format !== "unilearn-backup") throw new Error("ไฟล์สำรองไม่ถูกต้อง"); for (const [k, v] of Object.entries(d.data)) save(k, v); return null; }
         case "backup": return "localStorage (dev mode)";
+        case "save_conversation": { const c = load<unknown[]>("conversations", []); c.unshift({ id: now, createdAt: now, request: op.request, response: op.response }); save("conversations", c.slice(0, 1000)); return now; }
+        case "list_conversations": return load<unknown[]>("conversations", []).slice(0, op.limit ?? 200);
+        case "delete_conversation": save("conversations", load<{ id: number }[]>("conversations", []).filter((c) => c.id !== op.id)); return null;
+        case "clear_conversations": save("conversations", []); return null;
       }
     },
     claudeStatus: async () => ({ state: "unavailable", message: "AI Tutor ใช้ได้เฉพาะในแอปเดสก์ท็อป" }),

@@ -55,7 +55,7 @@ export default function Settings() {
         <ErrorBox error={err} />
       </Card>
       <Card title="เกี่ยวกับ">
-        <ul className="text-sm"><li>UniLearn Studio 1.0.0</li>
+        <ul className="text-sm"><li>UniLearn Studio 1.0.1</li>
           <li>เครื่องคำนวณ: {ping.data ? `engine ${ping.data.engine}, rules ${ping.data.rules}, ${ping.data.templates} ชุดโจทย์` : "…"}</li>
           <li className="text-xs text-muted">เนื้อหาคำอธิบายเขียนขึ้นใหม่ อ้างอิงหัวข้อ/หน้าจาก Thomas' Calculus 14th ed. เพื่อการศึกษาส่วนบุคคล ไม่ได้แจกจ่ายเนื้อหาตำรา</li></ul>
       </Card>
